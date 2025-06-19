@@ -79,7 +79,7 @@ module cache(
     reg block; // 00 block 없음, 01은 read 중, 10 은 write 중 
     reg next_block;
     
-    reg ls; // 0 -> load, 1 -> store
+    reg [1:0] ls; // 0 -> load, 1 -> store, 2 -> idle 
     //reg writeReady;
     reg push;
     reg append;
@@ -94,7 +94,7 @@ module cache(
     assign tag = address [15:4];
     assign idx = address [3:2];
     assign bo = address [1:0];
-    assign cpu_data = (hit && (ls === 0)) ? r_cpu_data : 16'bz;
+    assign cpu_data = (hit && (ls == 2'b00)) ? r_cpu_data : 16'bz;
     assign mem_data = (t_mem_Write == 1'b1) ? r_mem_data: 64'bz;
     assign t_mem_address = r_t_mem_address;
     assign t_mem_Read = r_t_mem_Read;
@@ -108,17 +108,17 @@ module cache(
         if (block == 0) begin 
             address = 16'bx;
             data = 16'bx;
-            ls = 1'bx;
+            ls = 2'b10;
             if(num_q == 3'd0) begin 
                 if(f_cpu_Read) begin    
                     address = f_cpu_address;
-                    ls = 0;
+                    ls = 2'b00;
                 end 
             end
             else begin 
                 address = addr_store[0];
                 data = data_store[0];
-                ls = 1;
+                ls = 2'b01;
             end     
         end       
     end
@@ -241,7 +241,7 @@ module cache(
                 next_valid = 1;
                 next_t_mem_Write = 0;
                 next_t_mem_Read = 0;
-                if(ls == 0) begin 
+                if(ls == 2'b00) begin 
                     next_block = 0;                   
                 end
             end

@@ -146,7 +146,7 @@ module cache(
     end 
     always @(*) begin 
         next_num_miss = num_miss;
-        if (t_mem_Read && (mem_data !== 64'bz) && (mem_data !== 64'bx)) begin 
+        if (t_mem_Read && mem_data_valid) begin 
             next_num_miss = num_miss + 1;
         end 
     end 
@@ -174,7 +174,7 @@ module cache(
         next_addr_store[5] = addr_store[5];
 
         next_num_q = num_q;
-        if (hit === 1) begin          
+        if (hit) begin          
             if(ls == 1) begin 
                 next_dirty = 1;  
                 next_data_bank = data_bank[idx];               

@@ -229,7 +229,7 @@ module datapath #(parameter WORD_SIZE = 16)(
             next_IR = 16'bx;
             next_IF_valid = 2'b00;
         end
-        if( (i_data === 16'bz || i_data === 16'bx)) begin 
+        if(!i_data_valid) begin 
             next_IR = 16'bx;
             next_IF_valid = 2'b00;
         end
@@ -237,7 +237,7 @@ module datapath #(parameter WORD_SIZE = 16)(
     
     always @(*) begin 
         next_IF_pc = pc + 1;
-        if( (i_data === 16'bz || i_data === 16'bx)) begin 
+        if( !i_data_valid ) begin 
             next_IF_pc = pc;
         end
     end

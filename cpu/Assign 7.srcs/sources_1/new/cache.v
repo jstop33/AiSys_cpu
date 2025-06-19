@@ -95,7 +95,7 @@ module cache(
     assign idx = address [3:2];
     assign bo = address [1:0];
     assign cpu_data = (hit && (ls === 0)) ? r_cpu_data : 16'bz;
-    assign mem_data = (t_mem_Write === 1) ? r_mem_data: 64'bz;
+    assign mem_data = (t_mem_Write == 1'b1) ? r_mem_data: 64'bz;
     assign t_mem_address = r_t_mem_address;
     assign t_mem_Read = r_t_mem_Read;
     assign t_mem_Write = r_t_mem_Write;
@@ -206,9 +206,9 @@ module cache(
             end
         end
        
-        else if (hit === 0) begin 
+        else if (!hit) begin 
            next_block = 1;
-           if (dirty[idx] === 1) begin 
+           if (dirty[idx]) begin 
                 next_r_t_mem_address = {tag_bank[idx],idx,2'b00};
                 next_r_mem_data = data_bank[idx];
                 next_t_mem_Write = 1;

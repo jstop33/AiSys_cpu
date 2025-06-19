@@ -32,9 +32,11 @@ module cache(
     output t_mem_Read,
     output t_mem_Write,
     
-    inout [`WORD_SIZE - 1:0] cpu_data,
+    input [`WORD_SIZE - 1:0] f_cpu_data,
+    output [`WORD_SIZE - 1:0] t_cpu_data,
     output t_cpu_data_valid,
-    inout [4*`WORD_SIZE - 1:0] mem_data,
+    input [4*`WORD_SIZE - 1:0] f_mem_data,
+    output [4*`WORD_SIZE - 1:0] t_mem_data,
     input mem_data_valid
     );
     reg [15:0] addr_store [0:5];
@@ -94,8 +96,8 @@ module cache(
     assign tag = address [15:4];
     assign idx = address [3:2];
     assign bo = address [1:0];
-    assign cpu_data = (hit && (ls == 2'b00)) ? r_cpu_data : 16'bz;
-    assign mem_data = (t_mem_Write == 1'b1) ? r_mem_data: 64'bz;
+    assign t_cpu_data = (hit && (ls == 2'b00)) ? r_cpu_data: 16'bz;
+    assign t_mem_data = (t_mem_Write == 1'b1) ? r_mem_data: 64'bz;
     assign t_mem_address = r_t_mem_address;
     assign t_mem_Read = r_t_mem_Read;
     assign t_mem_Write = r_t_mem_Write;
@@ -226,7 +228,7 @@ module cache(
         
         // f_cpu_write 항상 취급
         if(f_cpu_Write == 1) begin 
-                    next_data_store[next_num_q] = cpu_data;
+                    next_data_store[next_num_q] = f_cpu_data;
                     next_addr_store[next_num_q] = f_cpu_address;                  
                     next_num_q = next_num_q + 1;
 
@@ -235,7 +237,7 @@ module cache(
         // read 올라왔을 때 취급
         if (t_mem_Read) begin 
             if(mem_data_valid) begin 
-                next_data_bank = mem_data;
+                next_data_bank = f_mem_data;
                 next_dirty = 0;
                 next_tag = t_mem_address[15:4];
                 next_valid = 1;

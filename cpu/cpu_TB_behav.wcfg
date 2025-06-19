@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="9.880001 us"></ZoomEndTime>
-      <Cursor1Time time="0.020000 us"></Cursor1Time>
+      <ZoomStartTime time="423.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,563.001 ns"></ZoomEndTime>
+      <Cursor1Time time="805.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="209"></NameColumnWidth>
-      <ValueColumnWidth column_width="197"></ValueColumnWidth>
+      <NameColumnWidth column_width="243"></NameColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="65" />
+   <WVObjectSize size="78" />
    <wvobject fp_name="/cpu_TB/reset_n" type="logic">
       <obj_property name="ElementShortName">reset_n</obj_property>
       <obj_property name="ObjectShortName">reset_n</obj_property>
@@ -40,11 +40,6 @@
       <obj_property name="ElementShortName">i_address[15:0]</obj_property>
       <obj_property name="ObjectShortName">i_address[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/cpu_TB/i_data" type="array">
-      <obj_property name="ElementShortName">i_data[63:0]</obj_property>
-      <obj_property name="ObjectShortName">i_data[63:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/cpu_TB/d_readM" type="logic">
       <obj_property name="ElementShortName">d_readM</obj_property>
       <obj_property name="ObjectShortName">d_readM</obj_property>
@@ -56,11 +51,6 @@
    <wvobject fp_name="/cpu_TB/d_address" type="array">
       <obj_property name="ElementShortName">d_address[15:0]</obj_property>
       <obj_property name="ObjectShortName">d_address[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/cpu_TB/d_data" type="array">
-      <obj_property name="ElementShortName">d_data[63:0]</obj_property>
-      <obj_property name="ObjectShortName">d_data[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/cpu_TB/num_inst" type="array">
@@ -126,10 +116,6 @@
       <obj_property name="ObjectShortName">rf[3:0][15:0]</obj_property>
       <obj_property name="isExpanded"></obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/cpu_TB/UUT/D_CACHE/cpu_data" type="array">
-      <obj_property name="ElementShortName">cpu_data[15:0]</obj_property>
-      <obj_property name="ObjectShortName">cpu_data[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/cpu_TB/UUT/D_CACHE/f_cpu_address" type="array">
       <obj_property name="ElementShortName">f_cpu_address[15:0]</obj_property>
@@ -203,9 +189,9 @@
       <obj_property name="ElementShortName">next_block</obj_property>
       <obj_property name="ObjectShortName">next_block</obj_property>
    </wvobject>
-   <wvobject fp_name="/cpu_TB/UUT/D_CACHE/ls" type="logic">
-      <obj_property name="ElementShortName">ls</obj_property>
-      <obj_property name="ObjectShortName">ls</obj_property>
+   <wvobject fp_name="/cpu_TB/UUT/D_CACHE/ls" type="array">
+      <obj_property name="ElementShortName">ls[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ls[1:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/cpu_TB/UUT/D_CACHE/next_data_bank" type="array">
       <obj_property name="ElementShortName">next_data_bank[63:0]</obj_property>
@@ -298,5 +284,69 @@
    <wvobject fp_name="/cpu_TB/UUT/i_data_valid" type="logic">
       <obj_property name="ElementShortName">i_data_valid</obj_property>
       <obj_property name="ObjectShortName">i_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/DP/in_i_data" type="array">
+      <obj_property name="ElementShortName">in_i_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_i_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/DP/out_i_data" type="array">
+      <obj_property name="ElementShortName">out_i_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_i_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/DP/in_d_data" type="array">
+      <obj_property name="ElementShortName">in_d_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_d_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/DP/out_d_data" type="array">
+      <obj_property name="ElementShortName">out_d_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_d_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/f_cpu_d_data" type="array">
+      <obj_property name="ElementShortName">f_cpu_d_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">f_cpu_d_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/f_cpu_i_data" type="array">
+      <obj_property name="ElementShortName">f_cpu_i_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">f_cpu_i_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/t_cpu_i_data" type="array">
+      <obj_property name="ElementShortName">t_cpu_i_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">t_cpu_i_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/NUUT/in_i_data" type="array">
+      <obj_property name="ElementShortName">in_i_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in_i_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/NUUT/out_i_data" type="array">
+      <obj_property name="ElementShortName">out_i_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out_i_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/I_CACHE/f_cpu_data" type="array">
+      <obj_property name="ElementShortName">f_cpu_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">f_cpu_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/I_CACHE/f_cpu_data" type="array">
+      <obj_property name="ElementShortName">f_cpu_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">f_cpu_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/f_cpu_i_data" type="array">
+      <obj_property name="ElementShortName">f_cpu_i_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">f_cpu_i_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/I_CACHE/f_mem_data" type="array">
+      <obj_property name="ElementShortName">f_mem_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">f_mem_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/I_CACHE/t_mem_data" type="array">
+      <obj_property name="ElementShortName">t_mem_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">t_mem_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/I_CACHE/t_cpu_data" type="array">
+      <obj_property name="ElementShortName">t_cpu_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">t_cpu_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_TB/UUT/c_t_cpu_i_data" type="array">
+      <obj_property name="ElementShortName">c_t_cpu_i_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">c_t_cpu_i_data[15:0]</obj_property>
    </wvobject>
 </wave_config>

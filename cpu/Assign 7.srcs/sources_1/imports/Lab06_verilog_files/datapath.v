@@ -19,11 +19,13 @@ module datapath #(parameter WORD_SIZE = 16)(
         output branch,
                 
         output [WORD_SIZE-1:0] i_address, 
-        inout [WORD_SIZE-1:0] i_data, 
+        input [WORD_SIZE-1:0] in_i_data, 
+        output [WORD_SIZE-1:0] out_i_data,
         input i_data_valid,
         
         output [WORD_SIZE-1:0] d_address, 
-        inout [WORD_SIZE-1:0] d_data, 
+        inout [WORD_SIZE-1:0] in_d_data, 
+        inout [WORD_SIZE-1:0] out_d_data,
         input d_data_valid,
         
         output RegWrite1,
@@ -149,10 +151,8 @@ module datapath #(parameter WORD_SIZE = 16)(
     wire bool_alu;
     wire [WORD_SIZE-1:0] ALUOut_branch;
    
-    assign i_data = 16'bz; // 기본적으로 읽어올 예정 -> i data 쓸 일 있으면 재고함. 
-    assign d_data = d_WriteM ? EX_rt_data: 16'bz;
-
-    
+    assign out_i_data = 16'bz; // out_data로 내보냄
+    assign out_d_data = EX_rt_data;  // out은 따로 분리   
     assign IR_Ready = r_IR_Ready;
     assign d_address = r_d_address;
     assign i_address = r_i_address;
@@ -223,7 +223,7 @@ module datapath #(parameter WORD_SIZE = 16)(
     end
     // MDR 쪽은 그냥 data 넣어주기만 하면 됨. 
     always @(*) begin // 그대로 IR에 넣어주기만 하면 됨.  
-        next_IR = i_data; 
+        next_IR = in_i_data; 
         next_IF_valid = 2'b01;
         if (IFflush) begin 
             next_IR = 16'bx;
@@ -309,7 +309,7 @@ module datapath #(parameter WORD_SIZE = 16)(
         end 
         
         // write data는 앞에서 처리
-        next_MEM_ReadData = d_data;
+        next_MEM_ReadData = in_d_data;
         
     end
     // WB 쪽

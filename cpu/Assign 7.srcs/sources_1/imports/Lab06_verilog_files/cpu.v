@@ -11,14 +11,16 @@ module cpu(
         output i_readM, 
         output i_writeM, 
         output [`WORD_SIZE-1:0] i_address, 
-        inout [4*`WORD_SIZE-1:0] i_data, 
+        input [4*`WORD_SIZE-1:0] in_i_data, 
+        output [4*`WORD_SIZE-1:0] out_i_data, 
         input i_data_valid,
 
 	// Data memory interface
         output d_readM, 
         output d_writeM, 
         output [`WORD_SIZE-1:0] d_address, 
-        inout [4*`WORD_SIZE-1:0] d_data, 
+        input [4*`WORD_SIZE-1:0] in_d_data, 
+        output [4*`WORD_SIZE-1:0] out_d_data, 
         input d_data_valid,
         
         output [`WORD_SIZE-1:0] num_inst, 
@@ -48,9 +50,11 @@ module cpu(
     wire dataStall; 
     wire ctrl_is_halted;
     wire branch;
-    wire [15:0] c_i_data;
+    wire [15:0] c_f_cpu_i_data;
+    wire [15:0] c_t_cpu_i_data;
     wire [15:0] c_i_address;
-    wire [15:0] c_d_data;
+    wire [15:0] c_f_cpu_d_data;
+    wire [15:0] c_t_cpu_d_data;
     wire [15:0] c_d_address;
     wire c_d_readM;
     wire c_d_writeM;
@@ -114,10 +118,12 @@ module cpu(
         .branch(branch),
         
         .i_address(c_i_address),
-        .i_data(c_i_data),
+        .in_i_data(c_t_cpu_i_data),
+        .out_i_data(c_f_cpu_i_data),
         .i_data_valid(c_i_data_valid),
         .d_address(c_d_address),
-        .d_data(c_d_data),
+        .in_d_data(c_t_cpu_d_data),
+        .out_d_data(c_f_cpu_d_data),
         .d_data_valid(c_d_data_valid),
         
         .RegWrite1(RegWrite1),
@@ -155,11 +161,12 @@ module cpu(
             .reset_n(Reset_N),
             .t_mem_address(i_address),
             .t_mem_Read(i_readM),
-            .t_mem_Write(i_writeM),
-            
-            .cpu_data(c_i_data),
+            .t_mem_Write(i_writeM),           
+            .f_cpu_data(c_f_cpu_i_data),
+            .t_cpu_data(c_t_cpu_i_data),
             .t_cpu_data_valid(c_i_data_valid),
-            .mem_data(i_data),   
+            .f_mem_data(in_i_data),   
+            .t_mem_data(out_i_data),  
             .mem_data_valid(i_data_valid)
         );
     cache 
@@ -173,9 +180,11 @@ module cpu(
             .t_mem_Read(d_readM),
             .t_mem_Write(d_writeM),
             
-            .cpu_data(c_d_data),
+            .f_cpu_data(c_f_cpu_d_data),
+            .t_cpu_data(c_t_cpu_d_data),
             .t_cpu_data_valid(c_d_data_valid),
-            .mem_data(d_data),   
+            .f_mem_data(in_d_data),   
+            .t_mem_data(out_d_data),   
             .mem_data_valid(d_data_valid)
         );
 endmodule

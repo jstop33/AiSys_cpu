@@ -4,7 +4,7 @@
 `define WORD_SIZE 16	//	instead of 2^16 words to reduce memory
 			//	requirements in the Active-HDL simulator 
 
-module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data,i_data_valid,  d_readM, d_writeM, d_address, d_data, d_data_valid);
+module Memory(clk, reset_n, i_readM, i_writeM, i_address, in_i_data, out_i_data, i_data_valid,  d_readM, d_writeM, d_address, in_d_data, out_d_data, d_data_valid);
 	input clk;
 	wire clk;
 	input reset_n;
@@ -17,8 +17,9 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data,i_data_valid,  
 	wire i_writeM;
 	input [`WORD_SIZE-1:0] i_address;
 	wire [`WORD_SIZE-1:0] i_address;
-	inout i_data;
-	wire [4*`WORD_SIZE-1:0] i_data;
+	input in_i_data;
+	output [4*`WORD_SIZE-1:0] out_i_data; 
+	wire [4*`WORD_SIZE-1:0] in_i_data;
 	
 	// Data memory interface
 	input d_readM;
@@ -27,8 +28,9 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data,i_data_valid,  
 	wire d_writeM;
 	input [`WORD_SIZE-1:0] d_address;
 	wire [`WORD_SIZE-1:0] d_address;
-	inout d_data;
-	wire [4*`WORD_SIZE-1:0] d_data;
+	input in_d_data;
+	output [4*`WORD_SIZE-1:0] out_d_data;
+	wire [4*`WORD_SIZE-1:0] in_d_data;
     output i_data_valid;
 	output d_data_valid;
 	
@@ -36,8 +38,8 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data,i_data_valid,  
 	reg [4*`WORD_SIZE-1:0] i_outputData;
 	reg [4*`WORD_SIZE-1:0] d_outputData;
 	
-	assign i_data = i_readM? i_outputData: {4{`WORD_SIZE'bz}};
-	assign d_data = d_readM? d_outputData: {4{`WORD_SIZE'bz}};
+	assign out_i_data = i_readM? i_outputData: {4{`WORD_SIZE'bz}};
+	assign out_d_data = d_readM? d_outputData: {4{`WORD_SIZE'bz}};
 	reg [1:0] i_mem_latency;
 	reg [1:0] next_i_mem_latency;
 	
@@ -305,10 +307,10 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data,i_data_valid,  
 				    i_outputData <= {4{`WORD_SIZE'bz}};
 				end
 				if(i_writeM) begin 
-				    memory[i_address] <= i_data[`WORD_SIZE-1:0];
-				    memory[i_address+1] <= i_data[2*`WORD_SIZE-1:`WORD_SIZE];
-				    memory[i_address+2] <= i_data[3*`WORD_SIZE-1:2*`WORD_SIZE];
-				    memory[i_address+3] <= i_data[4*`WORD_SIZE-1:3*`WORD_SIZE];
+				    memory[i_address] <= in_i_data[`WORD_SIZE-1:0];
+				    memory[i_address+1] <= in_i_data[2*`WORD_SIZE-1:`WORD_SIZE];
+				    memory[i_address+2] <= in_i_data[3*`WORD_SIZE-1:2*`WORD_SIZE];
+				    memory[i_address+3] <= in_i_data[4*`WORD_SIZE-1:3*`WORD_SIZE];
 				end 
 				if(d_mem_latency == 2'b10) begin 
 				    r_d_data_valid <= 1;
@@ -322,10 +324,10 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data,i_data_valid,  
 				    d_outputData <= {4{`WORD_SIZE'bz}};
 				end
 				if(d_writeM) begin 				    
-				    memory[d_address] <= d_data[`WORD_SIZE-1:0];
-				    memory[d_address+1] <= d_data[2*`WORD_SIZE-1:`WORD_SIZE];
-				    memory[d_address+2] <= d_data[3*`WORD_SIZE-1:2*`WORD_SIZE];
-				    memory[d_address+3] <= d_data[4*`WORD_SIZE-1:3*`WORD_SIZE];
+				    memory[d_address] <= in_d_data[`WORD_SIZE-1:0];
+				    memory[d_address+1] <= in_d_data[2*`WORD_SIZE-1:`WORD_SIZE];
+				    memory[d_address+2] <= in_d_data[3*`WORD_SIZE-1:2*`WORD_SIZE];
+				    memory[d_address+3] <= in_d_data[4*`WORD_SIZE-1:3*`WORD_SIZE];
 				end 
 			end
 endmodule

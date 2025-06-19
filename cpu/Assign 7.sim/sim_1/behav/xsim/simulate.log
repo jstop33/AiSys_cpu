@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+Clock # 7973
+The testbench is finished. Summarizing...
+All Pass!
+$finish called at time : 797450 ns : File "C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sim_1/imports/Lab06_verilog_files/cpu_TB.v" Line 163

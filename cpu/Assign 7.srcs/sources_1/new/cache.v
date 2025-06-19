@@ -89,6 +89,8 @@ module cache(
     reg [15:0] next_num_access;
     reg [15:0] next_num_miss;
     
+    reg r_t_cpu_data_valid;
+    
     assign tag = address [15:4];
     assign idx = address [3:2];
     assign bo = address [1:0];
@@ -97,6 +99,7 @@ module cache(
     assign t_mem_address = r_t_mem_address;
     assign t_mem_Read = r_t_mem_Read;
     assign t_mem_Write = r_t_mem_Write;
+    assign t_cpu_data_valid = r_t_cpu_data_valid;
     
     
     // 누구 기준으로 작업하느냐 세팅
@@ -134,6 +137,7 @@ module cache(
             endcase
     end 
     // hit && miss 취급 (initial)
+    
     always @(*) begin 
         next_num_access = num_access;
         if (hit == 1 ) begin
@@ -174,7 +178,7 @@ module cache(
             if(ls == 1) begin 
                 next_dirty = 1;  
                 next_data_bank = data_bank[idx];               
-                
+               
                 case (bo)                  
                     2'b00: next_data_bank[`WORD_SIZE-1:0] = data;
                     2'b01: next_data_bank[2*`WORD_SIZE-1:`WORD_SIZE] = data;
@@ -210,6 +214,7 @@ module cache(
                 next_t_mem_Write = 1;
                 next_dirty = 0; 
                 next_t_mem_Read = 0;
+                
             end
             else begin 
                 next_r_mem_data = 64'bz;
@@ -242,7 +247,9 @@ module cache(
             end
         end
     end
-    
+    always @(*) begin 
+        r_t_cpu_data_valid = (hit&&(!ls));  
+    end
     always @(posedge clk) begin 
         if(!reset_n) begin 
             valid[2'b00] <= 12'b0;

@@ -383,7 +383,7 @@ module datapath #(parameter WORD_SIZE = 16)(
        end     
        else begin 
            // IF
-           if((d_ReadM !== 1 )|| (d_data !== 16'bz && d_data !== 16'bx)) begin               
+           if((d_ReadM !== 1 )|| (d_data_valid)) begin               
                if(!dataStall) begin
                    //if( (i_data !== 16'bz && i_data !== 16'bx)) begin 
                         IF_valid <= next_IF_valid;

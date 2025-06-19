@@ -29,3 +29,17 @@ launch_simulation
 open_wave_config C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/cpu_TB_behav.wcfg
 source cpu_TB.tcl
 run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/cpu_TB_behav.wcfg
+source cpu_TB.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/cpu_TB_behav.wcfg
+source cpu_TB.tcl
+run all
+relaunch_sim
+run all
+save_wave_config {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/cpu_TB_behav.wcfg}
+close_sim

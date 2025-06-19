@@ -229,7 +229,7 @@ module datapath #(parameter WORD_SIZE = 16)(
             next_IR = 16'bx;
             next_IF_valid = 2'b00;
         end
-        if( (i_data === 16'bz || i_data === 16'bx)) begin 
+        if( !i_data_valid) begin 
             next_IR = 16'bx;
             next_IF_valid = 2'b00;
         end
@@ -237,7 +237,7 @@ module datapath #(parameter WORD_SIZE = 16)(
     
     always @(*) begin 
         next_IF_pc = pc + 1;
-        if( (i_data === 16'bz || i_data === 16'bx)) begin 
+        if( !i_data_valid) begin 
             next_IF_pc = pc;
         end
     end
@@ -339,7 +339,6 @@ module datapath #(parameter WORD_SIZE = 16)(
         case(MEM_valid) 
             2'b00: begin 
                 next_r_num_inst = r_num_inst;
-                //r_output_port = 16'bx;
             end
             2'b01: begin 
                 next_r_num_inst = r_num_inst + 1;
@@ -383,20 +382,12 @@ module datapath #(parameter WORD_SIZE = 16)(
        end     
        else begin 
            // IF
-           if((d_ReadM !== 1 )|| (d_data_valid)) begin               
+           if((d_ReadM)|| (d_data_valid)) begin               
                if(!dataStall) begin
-                   //if( (i_data !== 16'bz && i_data !== 16'bx)) begin 
-                        IF_valid <= next_IF_valid;
-                        IR <= next_IR;
-                        IF_pc <= next_IF_pc;
-                        pc <= next_pc;
-                   //end
-                   //else begin 
-                        //IR <= 16'bx;
-                        //IF_valid <= 2'b00;
-                        //pc <= next_pc;
-                   //end
-                   // ID
+                   IF_valid <= next_IF_valid;
+                   IR <= next_IR;
+                   IF_pc <= next_IF_pc;
+                   pc <= next_pc;
                    A <= next_A;
                    B <= next_B;
                    ID_pc <= IF_pc;
@@ -407,10 +398,8 @@ module datapath #(parameter WORD_SIZE = 16)(
                    ID_RegDest <= RegDest;
                    ID_ALUOperation <= ALUOperation;
                    ID_ALUSrc <= ALUSrc;
-                   // ID - MEM control signal
                    ID_d_MemWrite <= next_ID_d_MemWrite;
                    ID_d_MemRead <= d_MemRead;
-                   // ID  - WB control signal 
                    ID_whichtoReg <= whichtoReg;
                    ID_RegWrite <= next_ID_RegWrite;
                    ID_valid <= next_ID_valid;
@@ -450,15 +439,12 @@ module datapath #(parameter WORD_SIZE = 16)(
                MEM_ReadData <= next_MEM_ReadData;
                MEM_whichtoReg <= EX_whichtoReg;
                MEM_w_addr <= EX_w_addr;
-               MEM_RegWrite <= EX_RegWrite;
-               // 
-               //r_output_port <= next_r_output_port;              
+               MEM_RegWrite <= EX_RegWrite;           
            end
            else begin 
                MEM_valid <= 2'b00;
                MEM_RegWrite <= 0;
            end 
-           // 한번만 해보자
            r_num_inst <= next_r_num_inst;
        end    
     end

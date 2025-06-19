@@ -20,9 +20,11 @@ module datapath #(parameter WORD_SIZE = 16)(
                 
         output [WORD_SIZE-1:0] i_address, 
         inout [WORD_SIZE-1:0] i_data, 
+        input i_data_valid,
         
         output [WORD_SIZE-1:0] d_address, 
         inout [WORD_SIZE-1:0] d_data, 
+        input d_data_valid,
         
         output RegWrite1,
         output [1:0] writeReg1,
@@ -47,6 +49,8 @@ module datapath #(parameter WORD_SIZE = 16)(
         input d_MemRead,
 
         input isWWD
+        
+        
     );
     reg [WORD_SIZE-1:0] ALUOut;
     wire  ALU_Cout;

@@ -12,13 +12,15 @@ module cpu(
         output i_writeM, 
         output [`WORD_SIZE-1:0] i_address, 
         inout [4*`WORD_SIZE-1:0] i_data, 
+        input i_data_valid,
 
 	// Data memory interface
         output d_readM, 
         output d_writeM, 
         output [`WORD_SIZE-1:0] d_address, 
         inout [4*`WORD_SIZE-1:0] d_data, 
-
+        input d_data_valid,
+        
         output [`WORD_SIZE-1:0] num_inst, 
         output [`WORD_SIZE-1:0] output_port, 
         output is_halted
@@ -54,6 +56,8 @@ module cpu(
     wire c_d_writeM;
     wire c_i_readM;
     wire c_i_writeM;
+    wire c_i_data_valid;
+    wire c_d_data_valid;
     
  control_unit Control(
 
@@ -111,8 +115,10 @@ module cpu(
         
         .i_address(c_i_address),
         .i_data(c_i_data),
+        .i_data_valid(c_i_data_valid),
         .d_address(c_d_address),
         .d_data(c_d_data),
+        .d_data_valid(c_d_data_valid),
         
         .RegWrite1(RegWrite1),
         .writeReg1(writeReg1),
@@ -152,7 +158,9 @@ module cpu(
             .t_mem_Write(i_writeM),
             
             .cpu_data(c_i_data),
-            .mem_data(i_data)
+            .t_cpu_data_valid(c_i_data_valid),
+            .mem_data(i_data),   
+            .mem_data_valid(i_data_valid)
         );
     cache 
         D_CACHE(
@@ -166,6 +174,8 @@ module cpu(
             .t_mem_Write(d_writeM),
             
             .cpu_data(c_d_data),
-            .mem_data(d_data)    
+            .t_cpu_data_valid(c_d_data_valid),
+            .mem_data(d_data),   
+            .mem_data_valid(d_data_valid)
         );
 endmodule

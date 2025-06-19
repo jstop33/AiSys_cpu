@@ -4,7 +4,7 @@
 `define WORD_SIZE 16	//	instead of 2^16 words to reduce memory
 			//	requirements in the Active-HDL simulator 
 
-module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_writeM, d_address, d_data);
+module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data,i_data_valid,  d_readM, d_writeM, d_address, d_data, d_data_valid);
 	input clk;
 	wire clk;
 	input reset_n;
@@ -29,8 +29,8 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_wri
 	wire [`WORD_SIZE-1:0] d_address;
 	inout d_data;
 	wire [4*`WORD_SIZE-1:0] d_data;
-    //output i_data_valid;
-	//output d_data_valid;
+    output i_data_valid;
+	output d_data_valid;
 	
 	reg [`WORD_SIZE-1:0] memory [0:`MEMORY_SIZE-1];
 	reg [4*`WORD_SIZE-1:0] i_outputData;

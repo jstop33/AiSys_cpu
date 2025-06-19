@@ -33,7 +33,9 @@ module cache(
     output t_mem_Write,
     
     inout [`WORD_SIZE - 1:0] cpu_data,
-    inout [4*`WORD_SIZE - 1:0] mem_data
+    output t_cpu_data_valid,
+    inout [4*`WORD_SIZE - 1:0] mem_data,
+    input mem_data_valid
     );
     reg [15:0] addr_store [0:5];
     reg [15:0] data_store [0:5];

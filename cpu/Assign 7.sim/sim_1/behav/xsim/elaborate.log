@@ -5,8 +5,8 @@ Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'Cin' [C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v:179]
-WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'Cin' [C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v:188]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'Cin' [C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v:183]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'Cin' [C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v:192]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/ALU.v" Line 3. Module ALU doesn't have a timescale but at least one module in design has a timescale.

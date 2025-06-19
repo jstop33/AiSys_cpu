@@ -109,15 +109,12 @@ module cache(
             if(num_q == 3'd0) begin 
                 if(f_cpu_Read) begin    
                     address = f_cpu_address;
-                    //next_block = 1;
                     ls = 0;
-                    //data = cpu_data; // 나중에 고민해보자
                 end 
             end
             else begin 
                 address = addr_store[0];
                 data = data_store[0];
-                //next_block = 1;
                 ls = 1;
             end     
         end       
@@ -150,8 +147,6 @@ module cache(
         end 
     end 
     always @(*) begin 
-        //next_num_access = num_access;
-        //next_num_miss = num_miss;
         next_data_bank = data_line;
         next_dirty = dirty[idx];
         next_t_mem_Write = 0;
@@ -175,8 +170,7 @@ module cache(
         next_addr_store[5] = addr_store[5];
 
         next_num_q = num_q;
-        if (hit === 1) begin 
-            //next_num_access = num_access + 1;            
+        if (hit === 1) begin          
             if(ls == 1) begin 
                 next_dirty = 1;  
                 next_data_bank = data_bank[idx];               
@@ -227,7 +221,6 @@ module cache(
         
         // f_cpu_write 항상 취급
         if(f_cpu_Write == 1) begin 
-                    //$display("cpu_data: %h", cpu_data);
                     next_data_store[next_num_q] = cpu_data;
                     next_addr_store[next_num_q] = f_cpu_address;                  
                     next_num_q = next_num_q + 1;
@@ -236,13 +229,11 @@ module cache(
         
         // read 올라왔을 때 취급
         if (t_mem_Read) begin 
-            if((mem_data !== 64'bz) && (mem_data !== 64'bx)) begin 
-                //next_num_miss = num_miss + 1;
+            if(mem_data_valid) begin 
                 next_data_bank = mem_data;
                 next_dirty = 0;
                 next_tag = t_mem_address[15:4];
                 next_valid = 1;
-                //$display("address, mem_data, idx, ls : %h,%h, %b, %b", t_mem_address, mem_data, idx, ls);
                 next_t_mem_Write = 0;
                 next_t_mem_Read = 0;
                 if(ls == 0) begin 
@@ -277,7 +268,6 @@ module cache(
                 r_t_mem_Read <= next_t_mem_Read;
                 dirty[idx] <= next_dirty; // 이미 적으러 내려감 -> dirty가 필요없음
                 tag_bank[idx] <= next_tag;
-                //r_cpu_data <= next_r_cpu_data;
                 r_mem_data <= next_r_mem_data;
                 valid[idx] <= next_valid;   
                 r_f_cpu_Write <= next_r_f_cpu_Write;  
@@ -290,8 +280,7 @@ module cache(
                 data_store[2] <= next_data_store[2];
                 data_store[1] <= next_data_store[1];
                 data_store[0] <= next_data_store[0];
-                    
-                    
+                                       
                 addr_store[5] <= next_addr_store[5];
                 addr_store[4] <= next_addr_store[4];
                 addr_store[3] <= next_addr_store[3];

@@ -420,3 +420,411 @@ selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, "simulati
 // TclEventType: WAVEFORM_MODEL_EVENT
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 // TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [Engine Memory]: 1,336 MB (+4981kb) [00:10:29]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 216 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("memory.v", 710, 152); // ad (memory.v)
+selectCodeEditor("memory.v", 416, 152); // ad (memory.v)
+selectCodeEditor("memory.v", 45, 179); // ad (memory.v)
+selectCodeEditor("memory.v", 47, 201); // ad (memory.v)
+// [GUI Memory]: 158 MB (+5853kb) [00:10:52]
+selectCodeEditor("memory.v", 520, 157); // ad (memory.v)
+// Elapsed time: 11 seconds
+selectCodeEditor("memory.v", 713, 141); // ad (memory.v)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu_TB_behav.wcfg", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,336 MB. GUI used memory: 91 MB. Current time: 6/19/25, 4:19:00 PM KST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu_TB.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cache.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu_TB.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cpu_TB.v", 355, 490); // ad (cpu_TB.v)
+selectCodeEditor("cpu_TB.v", 417, 379); // ad (cpu_TB.v)
+selectCodeEditor("cpu_TB.v", 510, 427); // ad (cpu_TB.v)
+// Elapsed time: 11 seconds
+selectCodeEditor("cpu_TB.v", 449, 441); // ad (cpu_TB.v)
+selectCodeEditor("cpu_TB.v", 459, 428); // ad (cpu_TB.v)
+selectCodeEditor("cpu_TB.v", 453, 450); // ad (cpu_TB.v)
+selectCodeEditor("cpu_TB.v", 347, 453); // ad (cpu_TB.v)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2065 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2067 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2067 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2168 ms. Increasing delay to 6504 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2425 ms to process. Increasing delay to 5000 ms.
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// Elapsed time: 106 seconds
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "UUT ; cpu ; Verilog Module", 1, "UUT", 0, true); // c (PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE) - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "DS_UNIT ; datastall_unit ; Verilog Module", 4, "DS_UNIT", 0, false); // c (PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE)
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "I_CACHE ; cache ; Verilog Module", 5, "I_CACHE", 0, false); // c (PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE)
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cpu.v", 207, 328); // ad (cpu.v)
+selectCodeEditor("cpu.v", 359, 245); // ad (cpu.v)
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1201ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1201 ms.
+// Elapsed time: 12 seconds
+selectCodeEditor("cpu.v", 237, 367); // ad (cpu.v)
+selectCodeEditor("cpu.v", 288, 350); // ad (cpu.v)
+selectCodeEditor("cpu.v", 277, 441); // ad (cpu.v)
+selectCodeEditor("cpu.v", 239, 293); // ad (cpu.v)
+selectCodeEditor("cpu.v", 119, 280); // ad (cpu.v)
+selectCodeEditor("cpu.v", 354, 310); // ad (cpu.v)
+selectCodeEditor("cpu.v", 290, 316); // ad (cpu.v)
+selectCodeEditor("cpu.v", 260, 358); // ad (cpu.v)
+selectCodeEditor("cpu.v", 257, 384); // ad (cpu.v)
+selectCodeEditor("cpu.v", 190, 430); // ad (cpu.v)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2014 ms to process. Increasing delay to 4000 ms.
+// Elapsed time: 18 seconds
+selectCodeEditor("cpu.v", 197, 157); // ad (cpu.v)
+selectCodeEditor("cpu.v", 70, 168); // ad (cpu.v)
+// Elapsed time: 10 seconds
+selectCodeEditor("cpu.v", 202, 397); // ad (cpu.v)
+selectCodeEditor("cpu.v", 31, 384); // ad (cpu.v)
+selectCodeEditor("cpu.v", 76, 378); // ad (cpu.v)
+selectCodeEditor("cpu.v", 202, 407); // ad (cpu.v)
+selectCodeEditor("cpu.v", 72, 378); // ad (cpu.v)
+selectCodeEditor("cpu.v", 72, 401); // ad (cpu.v)
+selectCodeEditor("cpu.v", 110, 383); // ad (cpu.v)
+selectCodeEditor("cpu.v", 286, 386); // ad (cpu.v)
+selectCodeEditor("cpu.v", 239, 410); // ad (cpu.v)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cache.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 12 seconds
+selectCodeEditor("cache.v", 323, 336); // ad (cache.v)
+// WARNING: HEventQueue.dispatchEvent() is taking  1054 ms.
+// Elapsed time: 16 seconds
+selectCodeEditor("cache.v", 277, 349); // ad (cache.v)
+selectCodeEditor("cache.v", 277, 349, false, false, false, false, true); // ad (cache.v) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("cache.v", 275, 352); // ad (cache.v)
+selectCodeEditor("cache.v", 291, 419); // ad (cache.v)
+selectCodeEditor("cache.v", 36, 244); // ad (cache.v)
+// Elapsed time: 12 seconds
+selectCodeEditor("cache.v", 247, 382); // ad (cache.v)
+selectCodeEditor("cache.v", 232, 188); // ad (cache.v)
+selectCodeEditor("cache.v", 231, 161); // ad (cache.v)
+selectCodeEditor("cache.v", 103, 177); // ad (cache.v)
+selectCodeEditor("cache.v", 291, 164); // ad (cache.v)
+selectCodeEditor("cache.v", 343, 122); // ad (cache.v)
+selectCodeEditor("cache.v", 205, 145); // ad (cache.v)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("cache.v", 205, 145); // ad (cache.v)
+selectCodeEditor("cache.v", 358, 146); // ad (cache.v)
+selectCodeEditor("cache.v", 311, 175); // ad (cache.v)
+selectCodeEditor("cache.v", 313, 109); // ad (cache.v)
+selectCodeEditor("cache.v", 324, 127); // ad (cache.v)
+selectCodeEditor("cache.v", 285, 162); // ad (cache.v)
+selectCodeEditor("cache.v", 328, 148); // ad (cache.v)
+selectCodeEditor("cache.v", 286, 159); // ad (cache.v)
+selectCodeEditor("cache.v", 265, 177); // ad (cache.v)
+selectCodeEditor("cache.v", 327, 93); // ad (cache.v)
+typeControlKey((HResource) null, "cache.v", 'v'); // ad (cache.v)
+selectCodeEditor("cache.v", 375, 209); // ad (cache.v)
+selectCodeEditor("cache.v", 219, 168); // ad (cache.v)
+selectCodeEditor("cache.v", 85, 197); // ad (cache.v)
+selectCodeEditor("cache.v", 345, 227); // ad (cache.v)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu_TB.v", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed Time for: 'L.f': 15m:52s
+// Elapsed Time for: 'L.f': 15m:54s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cache.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cpu.v", 298, 312); // ad (cpu.v)
+selectCodeEditor("cpu.v", 292, 336); // ad (cpu.v)
+selectCodeEditor("cpu.v", 268, 378); // ad (cpu.v)
+// Elapsed time: 27 seconds
+selectCodeEditor("cpu.v", 302, 419); // ad (cpu.v)
+// Elapsed time: 22 seconds
+selectCodeEditor("cpu.v", 297, 406); // ad (cpu.v)
+selectCodeEditor("cpu.v", 260, 455); // ad (cpu.v)
+selectCodeEditor("cpu.v", 241, 425); // ad (cpu.v)
+selectCodeEditor("cpu.v", 421, 452); // ad (cpu.v)
+selectCodeEditor("cpu.v", 430, 335); // ad (cpu.v)
+selectCodeEditor("cpu.v", 422, 349); // ad (cpu.v)
+// Elapsed time: 18 seconds
+selectCodeEditor("cpu.v", 274, 87); // ad (cpu.v)
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1524ms to process. Increasing delay to 7000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1524 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2049 ms to process. Increasing delay to 2000 ms.
+selectCodeEditor("cpu.v", 392, 400); // ad (cpu.v)
+selectCodeEditor("cpu.v", 423, 378); // ad (cpu.v)
+selectCodeEditor("cpu.v", 414, 354); // ad (cpu.v)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1075 ms to process. Increasing delay to 3000 ms.
+typeControlKey((HResource) null, "cpu.v", 'c'); // ad (cpu.v)
+selectCodeEditor("cpu.v", 260, 78); // ad (cpu.v)
+typeControlKey((HResource) null, "cpu.v", 'v'); // ad (cpu.v)
+selectCodeEditor("cpu.v", 252, 131); // ad (cpu.v)
+selectCodeEditor("cpu.v", 386, 429); // ad (cpu.v)
+typeControlKey((HResource) null, "cpu.v", 'c'); // ad (cpu.v)
+selectCodeEditor("cpu.v", 243, 58); // ad (cpu.v)
+typeControlKey((HResource) null, "cpu.v", 'v'); // ad (cpu.v)
+selectCodeEditor("cpu.v", 419, 87); // ad (cpu.v)
+selectCodeEditor("cpu.v", 364, 111); // ad (cpu.v)
+selectCodeEditor("cpu.v", 260, 81); // ad (cpu.v)
+selectCodeEditor("cpu.v", 264, 81, false, false, false, false, true); // ad (cpu.v) - Double Click
+selectCodeEditor("cpu.v", 264, 81); // ad (cpu.v)
+selectCodeEditor("cpu.v", 265, 77); // ad (cpu.v)
+selectCodeEditor("cpu.v", 299, 32); // ad (cpu.v)
+selectCodeEditor("cpu.v", 389, 86); // ad (cpu.v)
+// Elapsed time: 15 seconds
+selectCodeEditor("cpu.v", 251, 398); // ad (cpu.v)
+selectCodeEditor("cpu.v", 255, 401); // ad (cpu.v)
+selectCodeEditor("cpu.v", 254, 105); // ad (cpu.v)
+selectCodeEditor("cpu.v", 350, 108); // ad (cpu.v)
+selectCodeEditor("cpu.v", 256, 191); // ad (cpu.v)
+selectCodeEditor("cpu.v", 286, 356); // ad (cpu.v)
+selectCodeEditor("cpu.v", 293, 359); // ad (cpu.v)
+selectCodeEditor("cpu.v", 389, 354); // ad (cpu.v)
+selectCodeEditor("cpu.v", 256, 356); // ad (cpu.v)
+selectCodeEditor("cpu.v", 234, 42); // ad (cpu.v)
+selectCodeEditor("cpu.v", 223, 34); // ad (cpu.v)
+selectCodeEditor("cpu.v", 402, 31); // ad (cpu.v)
+selectCodeEditor("cpu.v", 243, 107); // ad (cpu.v)
+selectCodeEditor("cpu.v", 283, 64); // ad (cpu.v)
+selectCodeEditor("cpu.v", 394, 86); // ad (cpu.v)
+selectCodeEditor("cpu.v", 375, 119); // ad (cpu.v)
+selectCodeEditor("cpu.v", 359, 109); // ad (cpu.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cache.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cache.v", 130, 127); // ad (cache.v)
+selectCodeEditor("cache.v", 254, 174); // ad (cache.v)
+selectCodeEditor("cache.v", 173, 121); // ad (cache.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu.v", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cpu.v", 350, 407); // ad (cpu.v)
+// Elapsed time: 17 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 1); // aa
+// Elapsed time: 34 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu (cpu.v), DP : datapath (datapath.v)]", 4, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu (cpu.v), DP : datapath (datapath.v)]", 4, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// Elapsed time: 19 seconds
+selectCodeEditor("datapath.v", 285, 226); // ad (datapath.v)
+// [GUI Memory]: 168 MB (+2043kb) [00:22:19]
+selectCodeEditor("datapath.v", 309, 289); // ad (datapath.v)
+selectCodeEditor("datapath.v", 310, 378); // ad (datapath.v)
+// Elapsed time: 12 seconds
+selectCodeEditor("datapath.v", 273, 447); // ad (datapath.v)
+selectCodeEditor("datapath.v", 238, 419); // ad (datapath.v)
+selectCodeEditor("datapath.v", 127, 325); // ad (datapath.v)
+selectCodeEditor("datapath.v", 259, 333); // ad (datapath.v)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu (cpu.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu (cpu.v)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// Elapsed time: 10 seconds
+selectCodeEditor("cpu.v", 219, 372); // ad (cpu.v)
+selectCodeEditor("cpu.v", 218, 341); // ad (cpu.v)
+// Elapsed time: 12 seconds
+selectCodeEditor("cpu.v", 257, 402); // ad (cpu.v)
+// Elapsed time: 15 seconds
+selectCodeEditor("cpu.v", 241, 469); // ad (cpu.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cache.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cache.v", 230, 192); // ad (cache.v)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton("OptionPane.button", "Yes"); // JButton (OptionPane.button)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Simulation Sources"); // c (dialog3)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bq (Close Progress)
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'cpu_TB' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0' 
+// Tcl Message: INFO: [SIM-utils-54] Inspecting design source files for 'cpu_TB' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj cpu_TB_vlog.prj" 
+// Tcl Message: ECHO가 설정되어 있지 않습니다. ECHO가 설정되어 있지 않습니다. 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1693.934 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '6' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_TB_behav xil_defaultlib.cpu_TB xil_defaultlib.glbl -log elaborate.log" 
+// Tcl Message: ECHO가 설정되어 있지 않습니다. ECHO가 설정되어 있지 않습니다. 
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 594 ms to process. Increasing delay to 2000 ms.
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Built simulation snapshot cpu_TB_behav 
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1693.934 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "cpu_TB_behav -key {Behavioral:sim_1:Functional:cpu_TB} -tclbatch {cpu_TB.tcl} -view {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/cpu_TB_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 20 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: SIMULATION_OBJECT_TREE_REFRESHING
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,346 MB. GUI used memory: 93 MB. Current time: 6/19/25, 4:32:04 PM KST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: open_wave_config C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/cpu_TB_behav.wcfg 
+// Tcl Message: source cpu_TB.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_TB_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 1693.934 ; gain = 0.000 
+// Elapsed Time for: 'h': 21s
+// 'd' command handler elapsed time: 24 seconds
+dismissDialog("Run Simulation"); // e (Run Simulation Progress)
+// Elapsed Time for: 'L.f': 22m:30s
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, "simulation_live_run_all"); // B (PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, simulation_live_run_all)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: SIMULATION_OBJECT_TREE_REFRESHING
+// Tcl Message: run all 
+// Tcl Message: Clock # 7973 The testbench is finished. Summarizing... All Pass! $finish called at time : 797450 ns : File "C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sim_1/imports/Lab06_verilog_files/cpu_TB.v" Line 163 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cache.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "UUT ; cpu ; Verilog Module", 1, "UUT", 0, true); // c (PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE) - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("memory.v", 179, 240); // ad (memory.v)
+selectCodeEditor("memory.v", 172, 74); // ad (memory.v)
+selectCodeEditor("memory.v", 174, 74); // ad (memory.v)
+selectCodeEditor("memory.v", 175, 197); // ad (memory.v)
+selectCodeEditor("memory.v", 177, 105); // ad (memory.v)
+selectCodeEditor("memory.v", 178, 153); // ad (memory.v)
+selectCodeEditor("memory.v", 355, 309); // ad (memory.v)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cache.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cache.v", 127, 168); // ad (cache.v)
+selectCodeEditor("cache.v", 127, 262); // ad (cache.v)
+selectCodeEditor("cache.v", 410, 341); // ad (cache.v)
+selectCodeEditor("cache.v", 478, 398); // ad (cache.v)
+selectCodeEditor("cache.v", 259, 352); // ad (cache.v)
+selectCodeEditor("cache.v", 291, 298); // ad (cache.v)
+selectCodeEditor("cache.v", 399, 333); // ad (cache.v)
+selectCodeEditor("cache.v", 298, 314); // ad (cache.v)
+selectCodeEditor("cache.v", 530, 211); // ad (cache.v)
+selectCodeEditor("cache.v", 310, 170); // ad (cache.v)
+selectCodeEditor("cache.v", 299, 304); // ad (cache.v)

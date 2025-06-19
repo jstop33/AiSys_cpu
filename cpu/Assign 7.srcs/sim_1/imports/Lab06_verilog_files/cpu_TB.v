@@ -20,8 +20,8 @@ module cpu_TB();
 	wire d_writeM;
 	wire [`WORD_SIZE-1:0] d_address;
 	wire [4*`WORD_SIZE-1:0] d_data;
-    //wire i_data_valid;
-    //wire d_data_valid; 
+    wire i_data_valid;
+    wire d_data_valid; 
     
 	// for debuging purpose
 	wire [`WORD_SIZE-1:0] num_inst;		// number of instruction during execution

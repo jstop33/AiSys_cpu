@@ -20,8 +20,8 @@ module cpu_TB();
 	wire d_writeM;
 	wire [`WORD_SIZE-1:0] d_address;
 	wire [4*`WORD_SIZE-1:0] d_data;
-    wire i_data_valid;
-    wire d_data_valid; 
+    //wire i_data_valid;
+    //wire d_data_valid; 
     
 	// for debuging purpose
 	wire [`WORD_SIZE-1:0] num_inst;		// number of instruction during execution
@@ -29,8 +29,8 @@ module cpu_TB();
 	wire is_halted;				// set if the cpu is halted
 
 	// instantiate the unit under test
-	cpu UUT (clk, reset_n, i_readM, i_writeM, i_address, i_data,i_data_valid, d_readM, d_writeM, d_address, d_data, d_data_valid, num_inst, output_port, is_halted);
-	Memory NUUT(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_writeM, d_address, d_data, i_data_valid, d_data_valid);		   
+	cpu UUT (clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_writeM, d_address, d_data, num_inst, output_port, is_halted);
+	Memory NUUT(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_writeM, d_address, d_data);		   
 
 	// initialize inputs
 	initial begin

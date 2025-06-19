@@ -4,7 +4,7 @@
 `define WORD_SIZE 16	//	instead of 2^16 words to reduce memory
 			//	requirements in the Active-HDL simulator 
 
-module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_writeM, d_address, d_data, i_data_valid, d_data_valid);
+module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_writeM, d_address, d_data);
 	input clk;
 	wire clk;
 	input reset_n;
@@ -29,8 +29,8 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_wri
 	wire [`WORD_SIZE-1:0] d_address;
 	inout d_data;
 	wire [4*`WORD_SIZE-1:0] d_data;
-    output i_data_valid;
-	output d_data_valid;
+    //output i_data_valid;
+	//output d_data_valid;
 	
 	reg [`WORD_SIZE-1:0] memory [0:`MEMORY_SIZE-1];
 	reg [4*`WORD_SIZE-1:0] i_outputData;
@@ -294,32 +294,32 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_wri
 			    d_mem_latency <= next_d_mem_latency;
 			    
 				if(i_mem_latency == 2'b10) begin 
-				    r_i_data_valid <= 1;
+				    //r_i_data_valid <= 1;
 				    i_outputData[`WORD_SIZE-1:0]  <= memory[i_address];
 				    i_outputData[2*`WORD_SIZE-1:`WORD_SIZE]  <= memory[i_address + 1];
 				    i_outputData[3*`WORD_SIZE-1: 2*`WORD_SIZE]  <= memory[i_address + 2];
 				    i_outputData[4*`WORD_SIZE-1: 3*`WORD_SIZE]  <= memory[i_address + 3];
 				end 
 				else begin 
-				    r_i_data_valid <= 0;
+				    //r_i_data_valid <= 0;
 				    i_outputData <= {4{`WORD_SIZE'bz}};
 				end
 				if(i_writeM) begin 
-				    r_i_data_valid <= 1;
+				    //r_i_data_valid <= 1;
 				    memory[i_address] <= i_data[`WORD_SIZE-1:0];
 				    memory[i_address+1] <= i_data[2*`WORD_SIZE-1:`WORD_SIZE];
 				    memory[i_address+2] <= i_data[3*`WORD_SIZE-1:2*`WORD_SIZE];
 				    memory[i_address+3] <= i_data[4*`WORD_SIZE-1:3*`WORD_SIZE];
 				end 
 				if(d_mem_latency == 2'b10) begin 
-				    r_d_data_valid <= 1;
+				    //r_d_data_valid <= 1;
 				    d_outputData[`WORD_SIZE-1:0]  <= memory[d_address];
 				    d_outputData[2*`WORD_SIZE-1:`WORD_SIZE]  <= memory[d_address + 1];
 				    d_outputData[3*`WORD_SIZE-1: 2*`WORD_SIZE]  <= memory[d_address + 2];
 				    d_outputData[4*`WORD_SIZE-1: 3*`WORD_SIZE]  <= memory[d_address + 3];
 				end 
 				else begin 
-				    r_d_data_valid <= 0;
+				    //r_d_data_valid <= 0;
 				    d_outputData <= {4{`WORD_SIZE'bz}};
 				end
 				if(d_writeM) begin 				    

@@ -96,8 +96,8 @@ module cache(
     assign tag = address [15:4];
     assign idx = address [3:2];
     assign bo = address [1:0];
-    assign t_cpu_data = (hit && (ls == 2'b00)) ? r_cpu_data: 16'bz;
-    assign t_mem_data = (t_mem_Write == 1'b1) ? r_mem_data: 64'bz;
+    assign t_cpu_data = r_cpu_data;
+    assign t_mem_data = r_mem_data;
     assign t_mem_address = r_t_mem_address;
     assign t_mem_Read = r_t_mem_Read;
     assign t_mem_Write = r_t_mem_Write;

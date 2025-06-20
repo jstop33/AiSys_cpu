@@ -38,8 +38,8 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, in_i_data, out_i_data,
 	reg [4*`WORD_SIZE-1:0] i_outputData;
 	reg [4*`WORD_SIZE-1:0] d_outputData;
 	
-	assign out_i_data = i_readM? i_outputData: {4{`WORD_SIZE'bz}};
-	assign out_d_data = d_readM? d_outputData: {4{`WORD_SIZE'bz}};
+	assign out_i_data =  i_outputData;
+	assign out_d_data =  d_outputData;
 	reg [1:0] i_mem_latency;
 	reg [1:0] next_i_mem_latency;
 	

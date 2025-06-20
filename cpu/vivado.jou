@@ -3,10 +3,10 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Fri Jun 20 13:45:47 2025
-# Process ID: 42288
+# Start of session at: Fri Jun 20 14:30:40 2025
+# Process ID: 30140
 # Current directory: C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent34240 C:\Users\jungu\Desktop\AiSys\AiSys_cpu\cpu\Assign 7.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18828 C:\Users\jungu\Desktop\AiSys\AiSys_cpu\cpu\Assign 7.xpr
 # Log file: C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/vivado.log
 # Journal file: C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu\vivado.jou
 # Running On: BOOK-ELUD8M5EVV, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 12, Host memory: 33968 MB
@@ -14,35 +14,4 @@
 start_gui
 open_project {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.xpr}
 update_compile_order -fileset sources_1
-launch_simulation
-open_wave_config C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/cpu_TB_behav.wcfg
-source cpu_TB.tcl
-run all
-close_sim
-launch_simulation
-open_wave_config C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/cpu_TB_behav.wcfg
-source cpu_TB.tcl
-run all
-set_property is_enabled false [get_files  {{C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sim_1/imports/Lab06_verilog_files/cpu_TB.v}}]
-export_ip_user_files -of_objects  [get_files {{C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sim_1/imports/Lab06_verilog_files/cpu_TB.v}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sim_1/imports/Lab06_verilog_files/cpu_TB.v}}
-file delete -force {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sim_1/imports/Lab06_verilog_files/cpu_TB.v}
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top cpu_top [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-close [ open {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/new/clock_divider.v} w ]
-add_files {{C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/new/clock_divider.v}}
-update_compile_order -fileset sources_1
-launch_simulation
-launch_simulation
-update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 16
-wait_on_run synth_1
-launch_runs impl_1 -jobs 16
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
 open_run impl_1
-close_sim

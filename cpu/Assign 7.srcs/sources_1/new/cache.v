@@ -219,7 +219,7 @@ module cache(
                 
             end
             else begin 
-                next_r_mem_data = 64'bz;
+                //next_r_mem_data = 64'bz;
                 next_t_mem_Write = 0;
                 next_t_mem_Read = 1;
                 

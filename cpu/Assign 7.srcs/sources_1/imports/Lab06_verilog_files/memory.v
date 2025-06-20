@@ -304,7 +304,7 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, in_i_data, out_i_data,
 				end 
 				else begin 
 				    r_i_data_valid <= 0;
-				    i_outputData <= {4{`WORD_SIZE'bz}};
+				    //i_outputData <= {4{`WORD_SIZE'bz}};
 				end
 				if(i_writeM) begin 
 				    memory[i_address] <= in_i_data[`WORD_SIZE-1:0];
@@ -321,7 +321,7 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, in_i_data, out_i_data,
 				end 
 				else begin 
 				    r_d_data_valid <= 0;
-				    d_outputData <= {4{`WORD_SIZE'bz}};
+				    //d_outputData <= {4{`WORD_SIZE'bz}};
 				end
 				if(d_writeM) begin 				    
 				    memory[d_address] <= in_d_data[`WORD_SIZE-1:0];

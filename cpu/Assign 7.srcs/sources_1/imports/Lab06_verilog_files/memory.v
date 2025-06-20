@@ -59,6 +59,9 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, in_i_data, out_i_data,
                next_i_mem_latency = 2'b00;
            end 
        end 
+       else begin 
+            next_i_mem_latency = 2'b00;
+       end 
 	end 	
 	
 	always @(*) begin
@@ -69,6 +72,9 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, in_i_data, out_i_data,
            else begin 
                next_d_mem_latency = 2'b00;
            end 
+       end 
+       else begin 
+            next_d_mem_latency = 2'b00;
        end 
 	end 
 	

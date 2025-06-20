@@ -390,3 +390,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM16X1S => RAM32X1S (RAMS32): 152 instances
 
 open_run: Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 3031.102 ; gain = 225.762
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 20 14:25:28 2025...

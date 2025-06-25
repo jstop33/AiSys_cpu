@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files" \
+verilog xil_defaultlib  --include "../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files" --include "../../../../Assign 7.srcs/sim_1/imports/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files" \
 "../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files/ALU.v" \
 "../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files/RF.v" \
 "../../../../Assign 7.srcs/sources_1/new/cache.v" \

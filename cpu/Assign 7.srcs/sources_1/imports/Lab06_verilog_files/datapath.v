@@ -8,6 +8,7 @@ module datapath #(parameter WORD_SIZE = 16)(
         output [WORD_SIZE-1:0] address,
         output [WORD_SIZE-1:0] num_inst,
         output [WORD_SIZE-1:0]  output_port,
+        output output_valid,
         output IR_Ready,
         output [3:0] opcode,
         output [5:0] func_code,
@@ -49,10 +50,8 @@ module datapath #(parameter WORD_SIZE = 16)(
         input RegWrite,
         input d_MemWrite,
         input d_MemRead,
-
         input isWWD
-        
-        
+               
     );
     reg [WORD_SIZE-1:0] ALUOut;
     wire  ALU_Cout;
@@ -150,6 +149,8 @@ module datapath #(parameter WORD_SIZE = 16)(
     wire ALU_Cout_branch;
     wire bool_alu;
     wire [WORD_SIZE-1:0] ALUOut_branch;
+    
+    reg r_output_valid;
    
     assign out_i_data = 16'bz; // out_data로 내보냄
     assign out_d_data = EX_rt_data;  // out은 따로 분리   
@@ -174,6 +175,7 @@ module datapath #(parameter WORD_SIZE = 16)(
     assign writeReg3 = r_writeReg3;
     assign rs = r_rs;
     assign rt = r_rt;
+    assign output_valid = r_output_valid;
     
     reg [WORD_SIZE-1:0] ALU_input1;
     reg [WORD_SIZE-1:0] ALU_input2;
@@ -339,15 +341,16 @@ module datapath #(parameter WORD_SIZE = 16)(
         case(MEM_valid) 
             2'b00: begin 
                 next_r_num_inst = r_num_inst;
-                //r_output_port = 16'bx;
             end
             2'b01: begin 
                 next_r_num_inst = r_num_inst + 1;
                 r_output_port = 16'bx;
+                r_output_valid = 0;
             end
             2'b10: begin 
                 next_r_num_inst = r_num_inst + 1;
                 r_output_port = MEM_rs_data;
+                r_output_valid = 1; // added
             end       
         endcase 
     end 
@@ -356,6 +359,7 @@ module datapath #(parameter WORD_SIZE = 16)(
     end
     always @(posedge clk) begin 
        if(!reset_n) begin
+            r_output_valid <= 0;
             pc <= 16'b0;
             //IR <= 16'b0;
             ID_d_MemWrite <= 0; // MEM
@@ -385,18 +389,11 @@ module datapath #(parameter WORD_SIZE = 16)(
            // IF
            if((d_ReadM !== 1 )|| (d_data_valid)) begin               
                if(!dataStall) begin
-                   //if( (i_data !== 16'bz && i_data !== 16'bx)) begin 
-                        IF_valid <= next_IF_valid;
-                        IR <= next_IR;
-                        IF_pc <= next_IF_pc;
-                        pc <= next_pc;
-                   //end
-                   //else begin 
-                        //IR <= 16'bx;
-                        //IF_valid <= 2'b00;
-                        //pc <= next_pc;
-                   //end
-                   // ID
+                   IF_valid <= next_IF_valid;
+                   IR <= next_IR;
+                   IF_pc <= next_IF_pc;
+                   pc <= next_pc;
+                   
                    A <= next_A;
                    B <= next_B;
                    ID_pc <= IF_pc;
@@ -451,14 +448,13 @@ module datapath #(parameter WORD_SIZE = 16)(
                MEM_whichtoReg <= EX_whichtoReg;
                MEM_w_addr <= EX_w_addr;
                MEM_RegWrite <= EX_RegWrite;
-               // 
-               //r_output_port <= next_r_output_port;              
+               //         
            end
            else begin 
                MEM_valid <= 2'b00;
                MEM_RegWrite <= 0;
            end 
-           // 한번만 해보자
+           // 
            r_num_inst <= next_r_num_inst;
        end    
     end

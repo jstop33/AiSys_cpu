@@ -1,0 +1,425 @@
+/*
+
+AMD Vivado v2023.2 (64-bit) [Major: 2023, Minor: 2]
+SW Build: 4029153 on Fri Oct 13 20:14:34 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+
+Process ID (PID): 33380
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jun 25 19:54:51 KST 2025
+Time zone: 	Korean Standard Time (Asia/Seoul)
+
+OS: Windows 11
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 0, width = 1920, height = 1020
+Screen resolution (DPI): 125
+Available screens: 2
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+OS font scaling: 125%
+Anti-Alias Enabled: false
+
+Java version: 	17.0.7 64-bit
+JavaFX version: 17.0.1
+Java home: 	C:/Xilinx/Vivado/2023.2/tps/win64/jre17.0.7_7
+Java executable: 	C:/Xilinx/Vivado/2023.2/tps/win64/jre17.0.7_7/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	jungu
+User home directory: C:/Users/jungu
+User working directory: C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu
+User country: 	KR
+User language: 	ko
+User locale: 	ko_KR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2023.2
+RDI_DATADIR: C:/Xilinx/Vivado/2023.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2023.2/bin
+
+Vivado preferences file: C:/Users/jungu/AppData/Roaming/Xilinx/Vivado/2023.2/vivado.xml
+Vivado preferences directory: C:/Users/jungu/AppData/Roaming/Xilinx/Vivado/2023.2/
+Vivado layouts directory: C:/Users/jungu/AppData/Roaming/Xilinx/Vivado/2023.2/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2023.2/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/vivado.log
+Vivado journal file: 	C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/vivado.jou
+Engine tmp dir: 	C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/.Xil/Vivado-33380-BOOK-ELUD8M5EVV
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: C:/Xilinx/Vivado/2023.2
+RDI_ARGS:  -gui_launcher_event rodinguilauncherevent33524 "C:\Users\jungu\Desktop\AiSys\AiSys_cpu\cpu\Assign 7.xpr"
+RDI_ARGS_FUNCTION: RDI_EXEC_DEFAULT
+RDI_BASEROOT: C:/Xilinx/Vivado
+RDI_BINDIR: C:/Xilinx/Vivado/2023.2/bin
+RDI_BINROOT: C:/Xilinx/Vivado/2023.2/bin
+RDI_BUILD: yes
+RDI_CHECK_PROG: True
+RDI_DATADIR: C:/Xilinx/Vivado/2023.2/data
+RDI_INSTALLROOT: C:/Xilinx
+RDI_INSTALLVER: 2023.2
+RDI_INSTALLVERSION: 2023.2
+RDI_ISE_PLATFORM: nt64
+RDI_JAVACEFROOT: C:/Xilinx/Vivado/2023.2/tps/win64/java-cef-95.0.4638.69
+RDI_JAVAFXROOT: C:/Xilinx/Vivado/2023.2/tps/win64/javafx-sdk-17.0.1
+RDI_JAVAROOT: C:/Xilinx/Vivado/2023.2/tps/win64/jre17.0.7_7
+RDI_JAVA_VERSION: 17.0.7_7
+RDI_LIBDIR: C:/Xilinx/Vivado/2023.2/lib/win64.o
+RDI_MINGW_LIB: C:/Xilinx/Vivado/2023.2\tps\mingw\6.2.0\win64.o\nt\bin;C:/Xilinx/Vivado/2023.2\tps\mingw\6.2.0\win64.o\nt\libexec\gcc\x86_64-w64-mingw32\6.2.0
+RDI_OPT_EXT: .o
+RDI_PLATFORM: win64
+RDI_PREPEND_PATH: C:/Xilinx/Vivado/2023.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2023.2/ids_lite/ISE/lib/nt64
+RDI_PROG: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/vivado.exe
+RDI_PROGNAME: vivado.exe
+RDI_PYTHON3: C:/Xilinx/Vivado/2023.2\tps\win64\python-3.8.3
+RDI_PYTHON3_VERSION: 3.8.3
+RDI_PYTHONHOME: C:/Xilinx/Vivado/2023.2\tps\win64\python-3.8.3
+RDI_PYTHONPATH: C:/Xilinx/Vivado/2023.2\tps\win64\python-3.8.3;C:/Xilinx/Vivado/2023.2\tps\win64\python-3.8.3\bin;C:/Xilinx/Vivado/2023.2\tps\win64\python-3.8.3\lib;C:/Xilinx/Vivado/2023.2\tps\win64\python-3.8.3\lib\site-packages
+RDI_PYTHON_LD_LIBPATH: C:/Xilinx/Vivado/2023.2\tps\win64\python-3.8.3\lib
+RDI_SESSION_INFO: C:\Users\jungu\Desktop\AiSys\AiSys_cpu\cpu:BOOK-ELUD8M5EVV-2025-06-25_19-54-26.11
+RDI_SHARED_DATA: C:/Xilinx/SharedData/2023.2/data
+RDI_TPS_ROOT: C:/Xilinx/Vivado/2023.2/tps/win64
+RDI_USE_JDK17: True
+RDI_VERBOSE: False
+XILINX: C:/Xilinx/Vivado/2023.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2023.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2023.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2023.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2023.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2023.2
+_RDI_BINROOT: C:\Xilinx\Vivado\2023.2\bin
+_RDI_CWD: C:\Users\jungu\Desktop\AiSys\AiSys_cpu\cpu
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 793 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\jungu\Desktop\AiSys\AiSys_cpu\cpu\Assign 7.xpr. Version: Vivado v2023.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 848 MB. GUI used memory: 70 MB. Current time: 6/25/25, 7:54:52 PM KST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 115 MB (+117591kb) [00:00:28]
+// [Engine Memory]: 1,155 MB (+1060100kb) [00:00:28]
+// WARNING: HEventQueue.dispatchEvent() is taking  2928 ms.
+// Tcl Message: open_project {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'. 
+// [Engine Memory]: 1,254 MB (+42601kb) [00:00:30]
+// Tcl Message: open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 1580.211 ; gain = 489.742 
+// Project name: Assign 7; location: C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bq (Open Project Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,270 MB. GUI used memory: 75 MB. Current time: 6/25/25, 7:55:07 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 140 MB (+20228kb) [00:00:36]
+// Elapsed time: 71 seconds
+dismissDialog("Invalid Top Module"); // s (dialog0)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// [GUI Memory]: 147 MB (+220kb) [00:01:47]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, cpu_top.v]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, cpu_top.v]", 3, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("cpu_top.v", 312, 125); // ad (cpu_top.v)
+selectCodeEditor("cpu_top.v", 253, 211); // ad (cpu_top.v)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01m:34s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01m:36s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed Time for: 'L.f': 01m:38s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// Elapsed Time for: 'L.f': 01m:40s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_io (cpu_io.v)]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_io (cpu_io.v)]", 5, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("cpu_io.v", 154, 421); // ad (cpu_io.v)
+selectCodeEditor("cpu_io.v", 44, 406); // ad (cpu_io.v)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_io (cpu_io.v)]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_io (cpu_io.v)]", 3, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), UUT : cpu (cpu.v)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), UUT : cpu (cpu.v)]", 3, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), UUT : cpu (cpu.v), DP : datapath (datapath.v)]", 5, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), UUT : cpu (cpu.v), DP : datapath (datapath.v)]", 5, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("datapath.v", 213, 306); // ad (datapath.v)
+selectCodeEditor("datapath.v", 651, 53); // ad (datapath.v)
+selectCodeEditor("datapath.v", 193, 58); // ad (datapath.v)
+selectCodeEditor("datapath.v", 193, 81); // ad (datapath.v)
+selectCodeEditor("datapath.v", 193, 112); // ad (datapath.v)
+selectCodeEditor("datapath.v", 190, 127); // ad (datapath.v)
+selectCodeEditor("datapath.v", 284, 127); // ad (datapath.v)
+selectCodeEditor("datapath.v", 280, 239); // ad (datapath.v)
+selectCodeEditor("datapath.v", 473, 217); // ad (datapath.v)
+selectCodeEditor("datapath.v", 250, 329); // ad (datapath.v)
+selectCodeEditor("datapath.v", 340, 407); // ad (datapath.v)
+selectCodeEditor("datapath.v", 352, 336); // ad (datapath.v)
+selectCodeEditor("datapath.v", 376, 334); // ad (datapath.v)
+selectCodeEditor("datapath.v", 374, 334, false, false, false, false, true); // ad (datapath.v) - Double Click
+selectCodeEditor("datapath.v", 331, 335); // ad (datapath.v)
+selectCodeEditor("datapath.v", 547, 284); // ad (datapath.v)
+selectCodeEditor("datapath.v", 346, 224); // ad (datapath.v)
+// Elapsed time: 19 seconds
+selectCodeEditor("datapath.v", 359, 258); // ad (datapath.v)
+selectCodeEditor("datapath.v", 222, 354); // ad (datapath.v)
+selectCodeEditor("datapath.v", 120, 346); // ad (datapath.v)
+// Elapsed time: 23 seconds
+selectButton(RDIResource.HCodeView_FIND_TEXT_IN_FILE, (String) null); // v (RDIResource.HCodeView_FIND_TEXT_IN_FILE): TRUE
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "isWWD", true); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "isWWD"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "isWWD"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectCodeEditor("datapath.v", 317, 83); // ad (datapath.v)
+selectButton(RDIResource.HCodeView_FIND_TEXT_IN_FILE, (String) null); // v (RDIResource.HCodeView_FIND_TEXT_IN_FILE): FALSE
+selectCodeEditor("datapath.v", 253, 187); // ad (datapath.v)
+selectCodeEditor("datapath.v", 180, 244); // ad (datapath.v)
+selectCodeEditor("datapath.v", 142, 261); // ad (datapath.v)
+// Elapsed time: 21 seconds
+selectCodeEditor("datapath.v", 246, 247); // ad (datapath.v)
+// Elapsed time: 18 seconds
+selectCodeEditor("datapath.v", 226, 172); // ad (datapath.v)
+selectCodeEditor("datapath.v", 100, 175); // ad (datapath.v)
+selectCodeEditor("datapath.v", 81, 170); // ad (datapath.v)
+selectCodeEditor("datapath.v", 181, 167); // ad (datapath.v)
+selectCodeEditor("datapath.v", 85, 178); // ad (datapath.v)
+selectCodeEditor("datapath.v", 179, 165); // ad (datapath.v)
+// Elapsed time: 11 seconds
+selectCodeEditor("datapath.v", 89, 223); // ad (datapath.v)
+selectCodeEditor("datapath.v", 3, 213); // ad (datapath.v)
+selectCodeEditor("datapath.v", 117, 196); // ad (datapath.v)
+selectCodeEditor("datapath.v", 166, 175); // ad (datapath.v)
+selectCodeEditor("datapath.v", 230, 191); // ad (datapath.v)
+selectCodeEditor("datapath.v", 4, 159); // ad (datapath.v)
+selectCodeEditor("datapath.v", 241, 176); // ad (datapath.v)
+// Elapsed time: 10 seconds
+selectCodeEditor("datapath.v", 369, 336); // ad (datapath.v)
+selectCodeEditor("datapath.v", 378, 212); // ad (datapath.v)
+selectCodeEditor("datapath.v", 444, 368); // ad (datapath.v)
+// Elapsed time: 21 seconds
+selectCodeEditor("datapath.v", 160, 267); // ad (datapath.v)
+selectCodeEditor("datapath.v", 324, 266); // ad (datapath.v)
+selectCodeEditor("datapath.v", 324, 266); // ad (datapath.v)
+// Elapsed time: 21 seconds
+selectCodeEditor("datapath.v", 212, 295); // ad (datapath.v)
+selectCodeEditor("datapath.v", 324, 342); // ad (datapath.v)
+selectCodeEditor("datapath.v", 338, 366); // ad (datapath.v)
+selectCodeEditor("datapath.v", 346, 309); // ad (datapath.v)
+selectCodeEditor("datapath.v", 352, 309); // ad (datapath.v)
+selectCodeEditor("datapath.v", 368, 313); // ad (datapath.v)
+selectCodeEditor("datapath.v", 501, 286); // ad (datapath.v)
+selectCodeEditor("datapath.v", 471, 286); // ad (datapath.v)
+selectCodeEditor("datapath.v", 247, 293); // ad (datapath.v)
+selectCodeEditor("datapath.v", 367, 322); // ad (datapath.v)
+// Elapsed time: 26 seconds
+selectCodeEditor("datapath.v", 183, 264); // ad (datapath.v)
+// [GUI Memory]: 158 MB (+4535kb) [00:08:14]
+// Elapsed time: 34 seconds
+selectCodeEditor("datapath.v", 293, 368); // ad (datapath.v)
+selectCodeEditor("datapath.v", 279, 335); // ad (datapath.v)
+typeControlKey((HResource) null, "datapath.v", 'c'); // ad (datapath.v)
+selectCodeEditor("datapath.v", 328, 222); // ad (datapath.v)
+typeControlKey((HResource) null, "datapath.v", 'v'); // ad (datapath.v)
+selectCodeEditor("datapath.v", 329, 230); // ad (datapath.v)
+selectCodeEditor("datapath.v", 321, 240); // ad (datapath.v)
+selectCodeEditor("datapath.v", 276, 240); // ad (datapath.v)
+selectCodeEditor("datapath.v", 282, 240); // ad (datapath.v)
+// Elapsed time: 12 seconds
+selectCodeEditor("datapath.v", 333, 218); // ad (datapath.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu_top.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cpu.v", 245, 434); // ad (cpu.v)
+selectCodeEditor("cpu.v", 229, 432); // ad (cpu.v)
+selectCodeEditor("cpu.v", 238, 450); // ad (cpu.v)
+typeControlKey((HResource) null, "cpu.v", 'c'); // ad (cpu.v)
+selectCodeEditor("cpu.v", 418, 404); // ad (cpu.v)
+typeControlKey((HResource) null, "cpu.v", 'v'); // ad (cpu.v)
+selectCodeEditor("cpu.v", 241, 451); // ad (cpu.v)
+selectCodeEditor("cpu.v", 5, 471); // ad (cpu.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "datapath.v", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("datapath.v", 223, 388); // ad (datapath.v)
+selectCodeEditor("datapath.v", 365, 218); // ad (datapath.v)
+typeControlKey((HResource) null, "datapath.v", 'v'); // ad (datapath.v)
+selectCodeEditor("datapath.v", 343, 248); // ad (datapath.v)
+selectCodeEditor("datapath.v", 284, 261); // ad (datapath.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 13 seconds
+selectCodeEditor("cpu.v", 287, 189); // ad (cpu.v)
+selectCodeEditor("cpu.v", 288, 250); // ad (cpu.v)
+selectCodeEditor("cpu.v", 74, 218); // ad (cpu.v)
+selectCodeEditor("cpu.v", 288, 240); // ad (cpu.v)
+selectCodeEditor("cpu.v", 170, 213); // ad (cpu.v)
+selectCodeEditor("cpu.v", 306, 213); // ad (cpu.v)
+selectCodeEditor("cpu.v", 280, 215); // ad (cpu.v)
+selectCodeEditor("cpu.v", 273, 245); // ad (cpu.v)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (PAResourceQtoS.SaveProjectUtils_SAVE)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // W.d (dialog1)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'cpu_TB' 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0' 
+// Tcl Message: INFO: [SIM-utils-54] Inspecting design source files for 'cpu_TB' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj cpu_TB_vlog.prj" ECHO가 설정되어 있지 않습니다. ECHO가 설정되어 있지 않습니다. 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_TB_behav xil_defaultlib.cpu_TB xil_defaultlib.glbl -log elaborate.log" ECHO가 설정되어 있지 않습니다. ECHO가 설정되어 있지 않습니다. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1661.840 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 9 seconds
+selectButton("OptionPane.button", "OK"); // JButton (OptionPane.button)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 10m:06s
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog2)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Elapsed Time for: 'L.f': 10m:08s
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// Tcl Message: ERROR: [Common 17-180] Spawn failed: No error 
+// Tcl Message: ERROR: [Common 17-180] Spawn failed: No error 
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'cpu_TB' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'cpu_TB' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj cpu_TB_vlog.prj" ECHO가 설정되어 있지 않습니다. ECHO가 설정되어 있지 않습니다. 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_TB_behav xil_defaultlib.cpu_TB xil_defaultlib.glbl -log elaborate.log" ECHO가 설정되어 있지 않습니다. ECHO가 설정되어 있지 않습니다. 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 5 seconds
+selectButton("OptionPane.button", "OK"); // JButton (OptionPane.button)
+// Elapsed Time for: 'L.f': 10m:14s
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog3)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), UUT : cpu (cpu.v), DP : xil_defaultlib.datapath]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), UUT : cpu (cpu.v), DP : xil_defaultlib.datapath]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "datapath.v", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("datapath.v", 241, 237); // ad (datapath.v)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), UUT : cpu (cpu.v)]", 5, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v), UUT : cpu (cpu.v)]", 5, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "datapath.v", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cpu.v", 162, 264); // ad (cpu.v)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 4, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_top (cpu_top.v)]", 4, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("cpu_top.v", 523, 298); // ad (cpu_top.v)
+// Elapsed time: 22 seconds
+selectCodeEditor("cpu_top.v", 764, 401); // ad (cpu_top.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu.v", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cpu.v", 362, 186, false, false, false, true, false); // ad (cpu.v) - Popup Trigger
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cpu_top.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("cpu_top.v", 235, 322); // ad (cpu_top.v)
+selectCodeEditor("cpu_top.v", 216, 312); // ad (cpu_top.v)
+selectCodeEditor("cpu_top.v", 225, 312); // ad (cpu_top.v)
+// Elapsed time: 36 seconds
+selectCodeEditor("cpu_top.v", 306, 267); // ad (cpu_top.v)
+selectCodeEditor("cpu_top.v", 332, 247); // ad (cpu_top.v)
+selectCodeEditor("cpu_top.v", 298, 283); // ad (cpu_top.v)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (PAResourceQtoS.SaveProjectUtils_SAVE)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // W.d (dialog4)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'cpu_TB' 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0' 
+// Tcl Message: INFO: [SIM-utils-54] Inspecting design source files for 'cpu_TB' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj cpu_TB_vlog.prj" ECHO가 설정되어 있지 않습니다. ECHO가 설정되어 있지 않습니다. 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_TB_behav xil_defaultlib.cpu_TB xil_defaultlib.glbl -log elaborate.log" ECHO가 설정되어 있지 않습니다. ECHO가 설정되어 있지 않습니다. 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1661.840 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 9 seconds
+selectButton("OptionPane.button", "OK"); // JButton (OptionPane.button)
+// Elapsed Time for: 'L.f': 12m:28s
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog5)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 11); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 12); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_TB (cpu_TB.v)]", 16, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, cpu_TB (cpu_TB.v)]", 16, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("cpu_TB.v", 409, 238); // ad (cpu_TB.v)
+selectCodeEditor("cpu_TB.v", 345, 242); // ad (cpu_TB.v)
+selectCodeEditor("cpu_TB.v", 505, 76); // ad (cpu_TB.v)

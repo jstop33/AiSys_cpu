@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files" --include "../../../../Assign 7.srcs/sim_1/imports/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files" \
+"../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files/ALU.v" \
+"../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files/RF.v" \
+"../../../../Assign 7.srcs/sources_1/new/cache.v" \
+"../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files/control_unit.v" \
+"../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files/cpu.v" \
+"../../../../Assign 7.srcs/sources_1/new/cpu_io.v" \
+"../../../../Assign 7.srcs/sources_1/new/cpu_top.v" \
+"../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v" \
+"../../../../Assign 7.srcs/sources_1/imports/new/datastall_unit.v" \
+"../../../../Assign 7.srcs/sources_1/imports/Lab06_verilog_files/memory.v" \
+"../../../../Assign 7.srcs/sources_1/imports/test_skeleton_synth/uart_transmitter_synthesis.v" \
+"../../../../Assign 7.srcs/sim_1/new/cpu_io_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

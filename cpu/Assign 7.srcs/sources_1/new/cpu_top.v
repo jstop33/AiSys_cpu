@@ -23,7 +23,9 @@
 module cpu_top(
     input clk,
     input reset_n,
-    output [`WORD_SIZE-1:0] output_port
+    output [`WORD_SIZE-1:0] output_port,
+    output output_valid,
+    output num_inst
     );
 	
 	// Instruction memory interface
@@ -49,7 +51,7 @@ module cpu_top(
 	
 
 	// instantiate the unit under test
-	cpu UUT (clk, reset_n, i_readM, i_writeM, i_address, t_cpu_i_data, f_cpu_i_data, i_data_valid, d_readM, d_writeM, d_address, t_cpu_d_data,f_cpu_d_data, d_data_valid, num_inst, output_port, is_halted);
+	cpu UUT (clk, reset_n, i_readM, i_writeM, i_address, t_cpu_i_data, f_cpu_i_data, i_data_valid, d_readM, d_writeM, d_address, t_cpu_d_data,f_cpu_d_data, d_data_valid, num_inst, output_port,output_valid, is_halted);
 	Memory NUUT(clk, reset_n, i_readM, i_writeM, i_address, f_cpu_i_data, t_cpu_i_data, i_data_valid, d_readM, d_writeM, d_address, f_cpu_d_data, t_cpu_d_data, d_data_valid);		
    
 endmodule

@@ -1,0 +1,746 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Jun 26 09:54:41 2025
+| Host         : BOOK-ELUD8M5EVV running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file cpu_io_timing_summary_routed.rpt -pb cpu_io_timing_summary_routed.pb -rpx cpu_io_timing_summary_routed.rpx -warn_on_violation
+| Design       : cpu_io
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                     Violations  
+---------  ----------------  ------------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell     1000        
+TIMING-20  Warning           Non-clocked latch               107         
+LATCH-1    Advisory          Existing latches in the design  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (8474)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (15259)
+5. checking no_input_delay (1)
+6. checking no_output_delay (1)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (8474)
+---------------------------
+ There are 5715 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[10]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[11]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[12]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[13]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[14]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[15]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[2]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[3]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[4]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[5]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[6]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[7]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[8]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ALUOut_reg[9]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ID_RegDest_reg[0]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/ID_RegDest_reg[1]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/MEM_valid_reg[0]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: CPU/UUT/DP/MEM_valid_reg[1]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][10]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][11]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][12]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][13]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][14]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][15]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][2]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][3]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][4]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][5]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][6]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][7]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][8]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/addr_store_reg[0][9]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/dirty_reg[0]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/dirty_reg[1]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/dirty_reg[2]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/dirty_reg[3]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/num_q_reg[0]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/num_q_reg[1]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/num_q_reg[2]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/valid_reg[0]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/valid_reg[1]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/valid_reg[2]/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: CPU/UUT/D_CACHE/valid_reg[3]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: UART_T/FSM_onehot_state_reg[0]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: UART_T/FSM_onehot_state_reg[1]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: UART_T/FSM_onehot_state_reg[2]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: UART_T/r_ready_reg/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: num_q_reg[0]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: num_q_reg[1]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: num_q_reg[2]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: num_q_reg[3]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: num_q_reg[4]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: num_q_reg[5]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: num_q_reg[6]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: num_q_reg[7]/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: tx_counter_reg[0]/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (15259)
+----------------------------------------------------
+ There are 15259 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (1)
+------------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (1)
+-------------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                15260          inf        0.000                      0                15260           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay         15260 Endpoints
+Min Delay         15260 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[82][0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.930ns  (logic 1.774ns (4.805%)  route 35.156ns (95.195%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.309    36.930    CPU/NUUT/SR[0]
+    SLICE_X38Y149        FDRE                                         r  CPU/NUUT/memory_reg[82][0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[82][10]/S
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.930ns  (logic 1.774ns (4.805%)  route 35.156ns (95.195%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.309    36.930    CPU/NUUT/SR[0]
+    SLICE_X39Y149        FDSE                                         r  CPU/NUUT/memory_reg[82][10]/S
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[82][14]/S
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.930ns  (logic 1.774ns (4.805%)  route 35.156ns (95.195%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.309    36.930    CPU/NUUT/SR[0]
+    SLICE_X39Y149        FDSE                                         r  CPU/NUUT/memory_reg[82][14]/S
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[82][6]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.930ns  (logic 1.774ns (4.805%)  route 35.156ns (95.195%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.309    36.930    CPU/NUUT/SR[0]
+    SLICE_X39Y149        FDRE                                         r  CPU/NUUT/memory_reg[82][6]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[82][7]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.930ns  (logic 1.774ns (4.805%)  route 35.156ns (95.195%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.309    36.930    CPU/NUUT/SR[0]
+    SLICE_X38Y149        FDRE                                         r  CPU/NUUT/memory_reg[82][7]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[202][0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.639ns  (logic 1.774ns (4.843%)  route 34.864ns (95.157%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.018    36.639    CPU/NUUT/SR[0]
+    SLICE_X34Y151        FDRE                                         r  CPU/NUUT/memory_reg[202][0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[202][1]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.639ns  (logic 1.774ns (4.843%)  route 34.864ns (95.157%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.018    36.639    CPU/NUUT/SR[0]
+    SLICE_X34Y151        FDRE                                         r  CPU/NUUT/memory_reg[202][1]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[202][3]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.639ns  (logic 1.774ns (4.843%)  route 34.864ns (95.157%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.018    36.639    CPU/NUUT/SR[0]
+    SLICE_X34Y151        FDRE                                         r  CPU/NUUT/memory_reg[202][3]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[194][0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.620ns  (logic 1.774ns (4.845%)  route 34.846ns (95.155%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.000    36.620    CPU/NUUT/SR[0]
+    SLICE_X37Y149        FDRE                                         r  CPU/NUUT/memory_reg[194][0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            CPU/NUUT/memory_reg[194][1]/S
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        36.620ns  (logic 1.774ns (4.845%)  route 34.846ns (95.155%))
+  Logic Levels:           3  (IBUF=1 LUT1=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A9                                                0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    A9                   IBUF (Prop_ibuf_I_O)         1.526     1.526 r  reset_IBUF_inst/O
+                         net (fo=50, routed)          2.264     3.790    reset_IBUF
+    SLICE_X4Y195         LUT1 (Prop_lut1_I0_O)        0.124     3.914 f  CPU_i_1/O
+                         net (fo=328, routed)         7.582    11.496    CPU/NUUT/reset_n
+    SLICE_X52Y194        LUT1 (Prop_lut1_I0_O)        0.124    11.620 r  CPU/NUUT/ID_d_MemRead_i_1/O
+                         net (fo=3480, routed)       25.000    36.620    CPU/NUUT/SR[0]
+    SLICE_X37Y149        FDSE                                         r  CPU/NUUT/memory_reg[194][1]/S
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 CPU/UUT/D_CACHE/addr_store_reg[3][7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CPU/UUT/D_CACHE/addr_store_reg[2][7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.237ns  (logic 0.186ns (78.504%)  route 0.051ns (21.496%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X16Y168        FDRE                         0.000     0.000 r  CPU/UUT/D_CACHE/addr_store_reg[3][7]/C
+    SLICE_X16Y168        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  CPU/UUT/D_CACHE/addr_store_reg[3][7]/Q
+                         net (fo=1, routed)           0.051     0.192    CPU/UUT/DP/addr_store_reg[2][15]_0[7]
+    SLICE_X17Y168        LUT4 (Prop_lut4_I3_O)        0.045     0.237 r  CPU/UUT/DP/addr_store[2][7]_i_1/O
+                         net (fo=1, routed)           0.000     0.237    CPU/UUT/D_CACHE/addr_store_reg[2][15]_1[7]
+    SLICE_X17Y168        FDRE                                         r  CPU/UUT/D_CACHE/addr_store_reg[2][7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CPU/UUT/D_CACHE/addr_store_reg[5][12]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CPU/UUT/D_CACHE/addr_store_reg[4][12]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.240ns  (logic 0.186ns (77.515%)  route 0.054ns (22.485%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X16Y167        FDRE                         0.000     0.000 r  CPU/UUT/D_CACHE/addr_store_reg[5][12]/C
+    SLICE_X16Y167        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  CPU/UUT/D_CACHE/addr_store_reg[5][12]/Q
+                         net (fo=1, routed)           0.054     0.195    CPU/UUT/DP/addr_store_reg[4][15]_0[12]
+    SLICE_X17Y167        LUT4 (Prop_lut4_I3_O)        0.045     0.240 r  CPU/UUT/DP/addr_store[4][12]_i_1/O
+                         net (fo=1, routed)           0.000     0.240    CPU/UUT/D_CACHE/addr_store_reg[4][15]_1[12]
+    SLICE_X17Y167        FDRE                                         r  CPU/UUT/D_CACHE/addr_store_reg[4][12]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CPU/UUT/D_CACHE/addr_store_reg[3][6]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CPU/UUT/D_CACHE/addr_store_reg[2][6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.243ns  (logic 0.186ns (76.391%)  route 0.057ns (23.609%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y163        FDRE                         0.000     0.000 r  CPU/UUT/D_CACHE/addr_store_reg[3][6]/C
+    SLICE_X17Y163        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  CPU/UUT/D_CACHE/addr_store_reg[3][6]/Q
+                         net (fo=1, routed)           0.057     0.198    CPU/UUT/DP/addr_store_reg[2][15]_0[6]
+    SLICE_X16Y163        LUT4 (Prop_lut4_I3_O)        0.045     0.243 r  CPU/UUT/DP/addr_store[2][6]_i_1/O
+                         net (fo=1, routed)           0.000     0.243    CPU/UUT/D_CACHE/addr_store_reg[2][15]_1[6]
+    SLICE_X16Y163        FDRE                                         r  CPU/UUT/D_CACHE/addr_store_reg[2][6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CPU/UUT/DP/ID_d_MemWrite_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CPU/UUT/DP/EX_d_MemWrite_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.252ns  (logic 0.128ns (50.775%)  route 0.124ns (49.225%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y167        FDRE                         0.000     0.000 r  CPU/UUT/DP/ID_d_MemWrite_reg/C
+    SLICE_X22Y167        FDRE (Prop_fdre_C_Q)         0.128     0.128 r  CPU/UUT/DP/ID_d_MemWrite_reg/Q
+                         net (fo=1, routed)           0.124     0.252    CPU/UUT/DP/ID_d_MemWrite__0
+    SLICE_X22Y167        FDRE                                         r  CPU/UUT/DP/EX_d_MemWrite_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CPU/UUT/D_CACHE/next_r_mem_data_reg[3]/G
+                            (positive level-sensitive latch)
+  Destination:            CPU/UUT/D_CACHE/r_mem_data_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.259ns  (logic 0.158ns (61.003%)  route 0.101ns (38.997%))
+  Logic Levels:           1  (LDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y185        LDCE                         0.000     0.000 r  CPU/UUT/D_CACHE/next_r_mem_data_reg[3]/G
+    SLICE_X47Y185        LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  CPU/UUT/D_CACHE/next_r_mem_data_reg[3]/Q
+                         net (fo=1, routed)           0.101     0.259    CPU/UUT/D_CACHE/next_r_mem_data[3]
+    SLICE_X48Y185        FDRE                                         r  CPU/UUT/D_CACHE/r_mem_data_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CPU/UUT/DP/pc_reg[12]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CPU/UUT/I_CACHE/r_t_mem_address_reg[12]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.263ns  (logic 0.141ns (53.584%)  route 0.122ns (46.416%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X27Y171        FDRE                         0.000     0.000 r  CPU/UUT/DP/pc_reg[12]/C
+    SLICE_X27Y171        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  CPU/UUT/DP/pc_reg[12]/Q
+                         net (fo=3, routed)           0.122     0.263    CPU/UUT/I_CACHE/D[12]
+    SLICE_X27Y170        FDRE                                         r  CPU/UUT/I_CACHE/r_t_mem_address_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CPU/UUT/DP/EX_w_addr_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CPU/UUT/DP/MEM_w_addr_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.266ns  (logic 0.141ns (53.070%)  route 0.125ns (46.930%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y171        FDRE                         0.000     0.000 r  CPU/UUT/DP/EX_w_addr_reg[0]/C
+    SLICE_X22Y171        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  CPU/UUT/DP/EX_w_addr_reg[0]/Q
+                         net (fo=3, routed)           0.125     0.266    CPU/UUT/DP/writeReg2[0]
+    SLICE_X22Y171        FDRE                                         r  CPU/UUT/DP/MEM_w_addr_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data_reg_reg[3][9]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            data_reg_reg[2][9]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.266ns  (logic 0.186ns (69.897%)  route 0.080ns (30.103%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y197         FDRE                         0.000     0.000 r  data_reg_reg[3][9]/C
+    SLICE_X9Y197         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  data_reg_reg[3][9]/Q
+                         net (fo=1, routed)           0.080     0.221    UART_T/data_reg_reg[2][15]_0[9]
+    SLICE_X8Y197         LUT6 (Prop_lut6_I1_O)        0.045     0.266 r  UART_T/data_reg[2][9]_i_1/O
+                         net (fo=1, routed)           0.000     0.266    next_data_reg[2][9]
+    SLICE_X8Y197         FDRE                                         r  data_reg_reg[2][9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data_reg_reg[33][8]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            data_reg_reg[32][8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.266ns  (logic 0.186ns (69.897%)  route 0.080ns (30.103%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y197        FDRE                         0.000     0.000 r  data_reg_reg[33][8]/C
+    SLICE_X35Y197        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  data_reg_reg[33][8]/Q
+                         net (fo=1, routed)           0.080     0.221    UART_T/data_reg_reg[32][15]_0[8]
+    SLICE_X34Y197        LUT6 (Prop_lut6_I1_O)        0.045     0.266 r  UART_T/data_reg[32][8]_i_1/O
+                         net (fo=1, routed)           0.000     0.266    next_data_reg[32][8]
+    SLICE_X34Y197        FDRE                                         r  data_reg_reg[32][8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data_reg_reg[34][6]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            data_reg_reg[33][6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.266ns  (logic 0.186ns (69.897%)  route 0.080ns (30.103%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y198        FDRE                         0.000     0.000 r  data_reg_reg[34][6]/C
+    SLICE_X35Y198        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  data_reg_reg[34][6]/Q
+                         net (fo=1, routed)           0.080     0.221    UART_T/data_reg_reg[33][15]_0[6]
+    SLICE_X34Y198        LUT6 (Prop_lut6_I1_O)        0.045     0.266 r  UART_T/data_reg[33][6]_i_1/O
+                         net (fo=1, routed)           0.000     0.266    next_data_reg[33][6]
+    SLICE_X34Y198        FDRE                                         r  data_reg_reg[33][6]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

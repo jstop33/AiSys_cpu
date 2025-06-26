@@ -1,0 +1,415 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Jun 26 09:53:42 2025
+| Host         : BOOK-ELUD8M5EVV running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file cpu_io_control_sets_placed.rpt
+| Design       : cpu_io
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   337 |
+|    Minimum number of control sets                        |   337 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    66 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   337 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     4 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   323 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             161 |           76 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              43 |           16 |
+| Yes          | No                    | No                     |            1994 |          768 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            3472 |         1448 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------+-----------------------------------------------------+----------------------------------------+------------------+----------------+--------------+
+|                 Clock Signal                |                    Enable Signal                    |            Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------------+-----------------------------------------------------+----------------------------------------+------------------+----------------+--------------+
+|  UART_T/r_ready                             |                                                     |                                        |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                              | UART_T/next_RsTx                                    | reset_IBUF                             |                1 |              1 |         1.00 |
+|  CPU/UUT/DP/next_EX_w_addr_reg[1]_i_2_n_2   |                                                     |                                        |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/DP/pc[12]                                   | CPU/NUUT/SR[0]                         |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                              | UART_T/counter_data                                 | reset_IBUF                             |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/data_reg                                     |                                        |                1 |              8 |         8.00 |
+|  UART_T/tx_valid                            |                                                     |                                        |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/EX_pc                               | CPU/UUT/D_CACHE/ID_ALUOperation_reg[4] |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/EX_d_MemRead_reg_0                  | CPU/NUUT/SR[0]                         |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG                              | UART_T/next_counter_bit                             | reset_IBUF                             |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/EX_pc                               |                                        |                6 |             12 |         2.00 |
+|  clk_IBUF_BUFG                              |                                                     | reset_IBUF                             |                4 |             12 |         3.00 |
+|  clk_IBUF_BUFG                              | CPU/NUUT/r_d_data_valid_reg_0                       |                                        |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/EX_d_MemRead_reg[0]                 | CPU/NUUT/SR[0]                         |                4 |             12 |         3.00 |
+|  CPU/UUT/DP/next_r_num_inst_reg[15]_i_2_n_2 |                                                     |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_20[0]                           |                                        |                5 |             16 |         3.20 |
+|  UART_T/E[0]                                |                                                     |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_32[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5][0]                              |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_25[0]                           |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/p_0_in0_out__0[0]                   |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/p_0_in0_out__0[32]                  |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/p_0_in0_out__0[48]                  |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/p_0_in0_out__0[16]                  |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__18_1         | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__1_3          | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__12_1         | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__12_2         | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__25_3         | CPU/NUUT/SR[0]                         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__25_5         | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__27_2         | CPU/NUUT/SR[0]                         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__39_1         | CPU/NUUT/SR[0]                         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__9_1          | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[12]_3           | CPU/NUUT/SR[0]                         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_0            | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep__1_2     | CPU/NUUT/SR[0]                         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep__0_4     | CPU/NUUT/SR[0]                         |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_12[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_rep__3_3     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_rep__1_1     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_rep_7        | CPU/NUUT/SR[0]                         |               12 |             16 |         1.33 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep__0_7     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_rep_2        | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_23[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/addr_store[5][15]_i_1_n_2           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/addr_store[4][15]_i_1_n_2           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/addr_store[3][15]_i_1_n_2           |                                        |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/addr_store[2][15]_i_1_n_2           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/data_store                          |                                        |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/addr_store[1][15]_i_1_n_2           |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_5[0]                            |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__4_3[0]  | CPU/NUUT/SR[0]                         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__7_0[0]  | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__5_4[0]  |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__5_5[0]  |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__7_1[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__6_0[0]  | CPU/NUUT/SR[0]                         |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__6_1[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__9_3[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__8_3[0]  | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__7_5[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__8_2[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__9_7[0]  | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_13[0]        | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__9_8[0]  | CPU/NUUT/SR[0]                         |               14 |             16 |         1.14 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_23[0]        |                                        |               13 |             16 |         1.23 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_rep__0_2[0]  | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_26[0]        | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_3[0]         |                                        |               13 |             16 |         1.23 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_rep__3_1[0]  | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_rep__3_2[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_30[0]        | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_4[0]         | CPU/NUUT/SR[0]                         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_rep__12[0]   | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_27[0]        | CPU/NUUT/SR[0]                         |               13 |             16 |         1.23 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_3[0]         | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_8[0]         | CPU/NUUT/SR[0]                         |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_2[0]         |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_5[0]         | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_rep_3[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_28[0]        | CPU/NUUT/SR[0]                         |               13 |             16 |         1.23 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_rep_6[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_rep__0_1[0]  | CPU/NUUT/SR[0]                         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_29[0]        | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_9[0]         | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_rep__12_0[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_rep_1[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_rep__1_0[0]  | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep_7[0]     | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_4[0]         | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep__0_5[0]  | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[4]_rep__3_4[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep__0_6[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep__1_5[0]  |                                        |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep__1_7[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep__0_2[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_rep__2_1[0]  |                                        |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_3[0]         | CPU/NUUT/SR[0]                         |               15 |             16 |         1.07 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_6[0]         | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep__2_4[0]  |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep__2_0[0]  | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep__2_5[0]  |                                        |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_1[0]         | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_5[0]         | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep_2[0]     | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep_5[0]     | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep_6[0]     | CPU/NUUT/SR[0]                         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_1[0]         | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_rep__2_5[0]  | CPU/NUUT/SR[0]                         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep_0[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_2[0]         | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep__2_7[0]  |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep__2_8[0]  |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep_4[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_2[0]         | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[6]_rep_10[0]    | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep__0_7[0]  |                                        |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[5]_rep__2_3[0]  | CPU/NUUT/SR[0]                         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__15_1[0] | CPU/NUUT/SR[0]                         |               12 |             16 |         1.33 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__13_2[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__13_3[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__21_1[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__3_4[0]  | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__22_2[0] | CPU/NUUT/SR[0]                         |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__21_2[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__19_2[0] | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__20_2[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__20_5[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__3_0[0]  | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__20_1[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__20_3[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__21_3[0] |                                        |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__22_1[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__2_1[0]  |                                        |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__3_1[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__3_5[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__22_3[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__16_0[0] | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__10_1[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_0[0]              |                                        |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_1[0]              |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__19_2[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__1_1[0]       | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__1_2[0]       | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__22_1[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__15_3[0]      | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__20_1[0]      | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__16_11[0]     | CPU/NUUT/SR[0]                         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__12_3[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__19_1[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__20_2[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__13_2[0]      | CPU/NUUT/SR[0]                         |               12 |             16 |         1.33 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__14_4[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__15_2[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__14_3[0]      | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__16_12[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__16_9[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__14_5[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__14_2[0]      | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__11_12[0]     |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__16_13[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__17_1[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__25_7[0]      | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__25_4[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__22_2[0]      |                                        |               14 |             16 |         1.14 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__30_4[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__29_3[0]      | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__27_1[0]      |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__31_9[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__30_5[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__29_2[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__29_4[0]      |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__28_2[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__28_3[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__29_5[0]      |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__2_0[0]       | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__28_1[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__32_0[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__30_6[0]      |                                        |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__29_7[0]      | CPU/NUUT/SR[0]                         |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__31_43[0]     | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__29_1[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__31_10[0]     | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__32_2[0]      | CPU/NUUT/SR[0]                         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__35_0[0]      |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__33_3[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__36_3[0]      | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__37_1[0]      | CPU/NUUT/SR[0]                         |                3 |             16 |         5.33 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__37_19[0]     | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__33_2[0]      | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__3_1[0]       | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__40_4[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__4_0[0]       | CPU/NUUT/SR[0]                         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__4_3[0]       |                                        |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__4_6[0]       |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__5_0[0]       | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__5_1[0]       | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__5_2[0]       | CPU/NUUT/SR[0]                         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__7_0[0]       | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__7_1[0]       | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__40_1[0]      | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__4_1[0]       | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__8_1[0]       | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__8_2[0]       | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__38_0[0]      | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__38_1[0]      | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__4_2[0]       |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__39_0[0]      | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__3_0[0]       | CPU/NUUT/SR[0]                         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__10_1[0] | CPU/NUUT/SR[0]                         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[12]_1[0]        | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__10_4[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[2]_rep__12_8[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/E[0]                                | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__10_1[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__28[0]        | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__15_3[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__18_2[0] | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__18_3[0] | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[12]_2[0]        |                                        |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__11[0]        |                                        |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg[0]                |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__32[0]        | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__19[0]        | CPU/NUUT/SR[0]                         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__6[0]         | CPU/NUUT/SR[0]                         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__9[0]         | CPU/NUUT/SR[0]                         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_29[0]        | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__12_4[0] | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__36[0]        | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__8[0]         | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__15_0[0] | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__14_4[0] |                                        |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__0[0]         | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__15_4[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__1[0]         | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__15_6[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_Write_reg_rep__12[0]        | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__7_0[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__8_4[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[5]_rep__0_10[0] | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[5]_rep__3_19[0] |                                        |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[6]_1[0]         | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[6]_5[0]         |                                        |               12 |             16 |         1.33 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[6]_rep_7[0]     | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[6]_rep__0_1[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__5_1[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[6]_rep__0_10[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[7]_16[0]        | CPU/NUUT/SR[0]                         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[7]_7[0]         |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__3_18[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[5]_rep__2_14[0] | CPU/NUUT/SR[0]                         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[4]_rep_5[0]     |                                        |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__1_3[0]  | CPU/NUUT/SR[0]                         |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__10_3[0] |                                        |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__1_0[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__3_0[0]  |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__4_3[0]  | CPU/NUUT/SR[0]                         |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[4]_rep_18[0]    | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__4_0[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[5]_rep__2_13[0] | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[4]_rep_4[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__6_25[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__7_16[0] | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__3_2[0]  |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__5_6[0]  |                                        |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[4]_rep__4_1[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[5]_rep__1_20[0] | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[5]_rep__1_22[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__12_3[0] | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__8_0[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[4]_rep_3[0]     | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__0_7[0]  |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__6_24[0] |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__2_0[0]  |                                        |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__1_2[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__1_4[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[5]_rep__0_6[0]  |                                        |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[3]_rep__6_1[0]  | CPU/NUUT/SR[0]                         |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__2_0[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[2]_rep__4_0[0]  | CPU/NUUT/SR[0]                         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/I_CACHE/r_t_mem_address_reg[8]_9[0]         | CPU/NUUT/SR[0]                         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_10[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_11[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_2[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_4[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_5[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_8[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_1[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_12[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_13[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_14[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_15[0]                           |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_3[0]                            |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2][0]                              |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_6[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_7[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_18[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_0[0]                            |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_29[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_15[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_19[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_21[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_31[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_3[0]                            |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_30[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_13[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_33[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[2]_9[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_16[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_22[0]                           |                                        |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_24[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_1[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_11[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_8[0]                            |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_9[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_14[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_26[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_4[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_7[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_10[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_17[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_28[0]                           |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_6[0]                            |                                        |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_27[0]                           |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              | UART_T/num_q_reg[5]_2[0]                            |                                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                              |                                                     | CPU/NUUT/SR[0]                         |               12 |             31 |         2.58 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep_1        | CPU/NUUT/SR[0]                         |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_Write_reg_rep__26_11[0]     | CPU/NUUT/SR[0]                         |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[7]_rep__2_9[0]  | CPU/NUUT/SR[0]                         |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/r_t_mem_address_reg[3]_32[0]        | CPU/NUUT/SR[0]                         |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                              | CPU/UUT/D_CACHE/E[0]                                |                                        |               18 |             50 |         2.78 |
+|  clk_IBUF_BUFG                              |                                                     |                                        |               28 |             54 |         1.93 |
+|  CPU/n_1_555_BUFG                           |                                                     |                                        |               32 |             64 |         2.00 |
+|  clk_IBUF_BUFG                              | CPU/NUUT/i_outputData[63]_i_1_n_2                   |                                        |               23 |             64 |         2.78 |
+|  clk_IBUF_BUFG                              | CPU/NUUT/d_outputData[63]_i_1_n_2                   |                                        |               34 |             64 |         1.88 |
+|  clk_IBUF_BUFG                              | CPU/NUUT/p_0_in1_in                                 |                                        |               19 |             76 |         4.00 |
+|  clk_IBUF_BUFG                              | CPU_i_1_n_2                                         |                                        |              101 |            212 |         2.10 |
++---------------------------------------------+-----------------------------------------------------+----------------------------------------+------------------+----------------+--------------+
+
+

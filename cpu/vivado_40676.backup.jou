@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Jun 25 15:48:23 2025
+# Process ID: 40676
+# Current directory: C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent54952 C:\Users\jungu\Desktop\AiSys\AiSys_cpu\cpu\Assign 7.xpr
+# Log file: C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/vivado.log
+# Journal file: C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu\vivado.jou
+# Running On: BOOK-ELUD8M5EVV, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 12, Host memory: 33968 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sim_1/imports/cpu/cpu_TB_behav.wcfg}
+source cpu_TB.tcl
+run all
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config {C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sim_1/imports/cpu/cpu_TB_behav.wcfg}
+source cpu_TB.tcl
+run all
+close_sim

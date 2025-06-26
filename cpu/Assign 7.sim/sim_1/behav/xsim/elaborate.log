@@ -1,12 +1,12 @@
 Vivado Simulator v2023.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_TB_behav xil_defaultlib.cpu_TB xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_io_TB_behav xil_defaultlib.cpu_io_TB xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'Cin' [C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v:183]
-WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'Cin' [C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v:192]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'Cin' [C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v:185]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 1 for port 'Cin' [C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/datapath.v:194]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/ALU.v" Line 3. Module ALU doesn't have a timescale but at least one module in design has a timescale.
@@ -15,6 +15,7 @@ WARNING: [XSIM 43-4099] "C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.src
 WARNING: [XSIM 43-4099] "C:/Users/jungu/Desktop/AiSys/AiSys_cpu/cpu/Assign 7.srcs/sources_1/imports/Lab06_verilog_files/ALU.v" Line 3. Module ALU doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_transmitter
 Compiling module xil_defaultlib.control_unit
 Compiling module xil_defaultlib.ALU
 Compiling module xil_defaultlib.RF
@@ -23,6 +24,8 @@ Compiling module xil_defaultlib.datastall_unit
 Compiling module xil_defaultlib.cache
 Compiling module xil_defaultlib.cpu
 Compiling module xil_defaultlib.Memory
-Compiling module xil_defaultlib.cpu_TB
+Compiling module xil_defaultlib.cpu_top
+Compiling module xil_defaultlib.cpu_io
+Compiling module xil_defaultlib.cpu_io_TB
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot cpu_TB_behav
+Built simulation snapshot cpu_io_TB_behav

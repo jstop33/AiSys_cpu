@@ -25,7 +25,9 @@ module cpu(
         
         output [`WORD_SIZE-1:0] num_inst, 
         output [`WORD_SIZE-1:0] output_port, 
-        output is_halted
+        output output_valid,
+        output is_halted       
+        
 );
     // Datapath - control Unit
     wire [3:0] opcode;
@@ -92,6 +94,7 @@ module cpu(
         .IR_Ready(IR_Ready),
         .num_inst(num_inst),
         .output_port (output_port),
+        .output_valid (output_valid),
         .d_ReadM(c_d_readM),
         .d_WriteM(c_d_writeM),
         .i_ReadM(c_i_readM),
